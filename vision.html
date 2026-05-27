@@ -2,33 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About UCP</title>
+  <title>UCP – Vision & Principles</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- <header>
-    <div class="logo">UCP • ಸಂಘಟಿತ ನಾಗರಿಕರ ಪಕ್ಷ</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="vision.html">Vision</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
+<header class="site-header">
+  <div class="logo">UCP • ಸಂಘಟಿತ ನಾಗರಿಕರ ಪಕ್ಷ</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="vision.html" class="active">Vision</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <main style="max-width: 800px; margin: 2rem auto; padding: 1rem;">
-    <h1>Our Vision & Principles</h1>
-    <p>
-     People Power / ಜನಶಕ್ತಿ
-     Transparency / ಪಾರದರ್ಶಕತೆ
-     Accountability / ಹೊಣೆಗಾರಿಕೆ
-     Participation / ಭಾಗವಹಿಸುವಿಕೆ
-    </p>
-      </main>
-  <footer>
-    © <span id="year"></span> UCP – United Citizens Party / ಸಂಘಟಿತ ನಾಗರಿಕರ ಪಕ್ಷ
-  </footer>
+<main class="container">
+  <h1>Our Vision & Principles</h1>
+
+  <p>
+    UCP envisions a future where governance is transparent, leadership is accountable,
+    and citizens actively shape public policy.
+  </p>
+
+  <h2>Core Principles</h2>
+  <ul>
+    <li><strong>People Power / ಜನಶಕ್ತಿ</strong></li>
+    <li><strong>Transparency / ಪಾರದರ್ಶಕತೆ</strong></li>
+    <li><strong>Accountability / ಹೊಣೆಗಾರಿಕೆ</strong></li>
+    <li><strong>Participation / ಭಾಗವಹಿಸುವಿಕೆ</strong></li>
+  </ul>
+</main>
+
+<footer class="site-footer">
+  © <span id="year"></span> UCP – United Citizens Party  
+  <br>We respect your privacy. No tracking, no profiling.
+  <br><a href="privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>

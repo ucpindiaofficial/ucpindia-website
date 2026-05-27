@@ -4,60 +4,42 @@
   <meta charset="UTF-8">
   <title>Contact UCP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: system-ui; margin: 0; background: #f5f7fb; }
-    header { background: #111; color: #fff; padding: 1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
-    header a { color:#fff; margin-left:1rem; text-decoration:none; font-weight:600; }
-    main { max-width: 800px; margin: 2rem auto; padding: 1rem; }
-    form { background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
-    input, textarea {
-      width:100%; padding:0.7rem; margin:0.4rem 0 1rem;
-      border-radius:8px; border:1px solid #ccc; font-size:0.95rem;
-    }
-    button {
-      padding:0.8rem 1.6rem; border-radius:999px; border:none;
-      background:#111; color:#fff; font-weight:600; cursor:pointer;
-    }
-    .links a { display:inline-block; margin-right:1rem; margin-top:1rem; text-decoration:none; font-weight:600; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <div>UCP • ಸಂಘಟಿತ ನಾಗರಿಕರ ಪಕ್ಷ</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="vision.html">Vision</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Contact / Join UCP</h1>
-    <p>Share your interest, questions, or ideas. We believe in direct citizen connection.</p>
+<header class="site-header">
+  <div class="logo">UCP • ಸಂಘಟಿತ ನಾಗರಿಕರ ಪಕ್ಷ</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="vision.html">Vision</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
 
-    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
-      <input type="hidden" name="_subject" value="New message from UCP website">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="4" placeholder="Your Message / How you want to contribute" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+<main class="container">
+  <h1>Contact / Join UCP</h1>
 
-    <div class="links">
-      <h2>Quick Contact</h2>
-      <a href="tel:+91XXXXXXXXXX">📞 Call</a>
-      <a href="mailto:ucpindia.joinus@gmail.com">✉ Email</a>
-      <a href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 WhatsApp</a>
-    </div>
-  </main>
+  <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" class="contact-form">
+    <input type="hidden" name="_subject" value="New message from UCP website">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    <button class="btn btn-primary" type="submit">Send Message</button>
+  </form>
+</main>
 
-  <footer style="text-align:center; padding:1rem; font-size:0.85rem; color:#555;">
-    © <span id="year"></span> UCP – United Citizens Party / ಸಂಘಟಿತ ನಾಗರಿಕರ ಪಕ್ಷ
-  </footer>
+<footer class="site-footer">
+  © <span id="year"></span> UCP – United Citizens Party  
+  <br>We respect your privacy. No tracking, no profiling.
+  <br><a href="privacy.html">Privacy Policy</a>
+</footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>

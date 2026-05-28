@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About UCP</title>
+  <title>Volunteer – UCP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,7 +13,7 @@
   <div class="logo">UCP • ಸಂಘಟಿತ ನಾಗರಿಕರ ಪಕ್ಷ</div>
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html" class="active">About</a>
+    <a href="about.html">About</a>
     <a href="vision.html">Vision</a>
     <a href="join.html">Join</a>
     <a href="contact.html">Contact</a>
@@ -22,27 +22,27 @@
 </header>
 
 <section class="sub-hero">
-  <h1>About UCP</h1>
+  <h1>Volunteer with UCP</h1>
 </section>
 
 <main class="container">
   <div class="content-box">
-    <p>
-      UCP (ಸಂಘಟಿತ ನಾಗರಿಕರ ಪಕ್ಷ) is a citizens‑first platform focused on people’s power,
-      transparent governance, and accountable leadership.
-    </p>
 
-    <h2>Why UCP?</h2>
-    <ul>
-      <li><strong>People Power</strong> — Citizens at the center of governance.</li>
-      <li><strong>Transparency</strong> — Open budgets, open decisions.</li>
-      <li><strong>Accountability</strong> — Leaders answer for promises.</li>
-      <li><strong>Participation</strong> — Policy shaped by citizens.</li>
-    </ul>
+    <p>Volunteers are the heart of UCP. You can contribute time, skills, and ideas.</p>
 
-    <h2>Leadership</h2>
-    <p>Meet the citizens guiding UCP with integrity and responsibility.</p>
-    <button class="btn btn-secondary" onclick="location.href='leadership.html'">View Leadership</button>
+    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" class="contact-form">
+      <input type="hidden" name="_subject" value="New Volunteer Signup – UCP">
+
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="phone" placeholder="Phone Number (optional)">
+      <input type="text" name="city" placeholder="City / Area" required>
+
+      <textarea name="areas" rows="4" placeholder="Areas you want to volunteer in (outreach, research, tech, design, etc.)" required></textarea>
+
+      <button class="btn btn-primary" type="submit">Sign Up as Volunteer</button>
+    </form>
+
   </div>
 </main>
 

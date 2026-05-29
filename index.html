@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>United Citizens Party</title>
+  <title>United Citizens Party - Power to the People</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="United Citizens Party - power to the people, transparent and accountable governance, development for every Indian. Beyond left and right.">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="orange-header">
+<header class="site-header">
   <div class="logo-area">
     <img src="assets/logo.jpg" alt="United Citizens Party Logo" class="ucp-logo">
     <span class="logo-text">United Citizens Party</span>
@@ -25,32 +26,57 @@
   </nav>
 </header>
 
-<section class="dark-hero">
-  <h1>Welcome to United Citizens Party</h1>
-  <p>A movement built by citizens, for citizens.</p>
+<section class="hero">
+  <h1>Power to the People</h1>
+  <p>A government that's open about its work, owns its actions, and has the courage to bring change.</p>
+  <div class="cta">
+    <a class="btn" href="join.html">Join the Movement</a>
+    <a class="btn btn-outline" href="vision.html">Our Vision</a>
+  </div>
 </section>
 
 <main class="container">
-  <div class="white-card">
-    <h2>Our Purpose</h2>
-    <p>
-      United Citizens Party stands for transparency, accountability, and people-powered governance.
-      Together, we can build a future where every citizen has a voice.
-    </p>
-    <button onclick="location.href='join.html'">Join the Movement</button>
+  <div class="card">
+    <p class="lead">United Citizens Party is a people-first political movement. We don't fit the old boxes of left or right. Our agenda is simple: a government that is honest with you, answerable to you, and focused on building a better future for every Indian.</p>
+
+    <h2>What We Stand For</h2>
+    <div class="grid">
+      <div class="pillar">
+        <h3>Power to the People</h3>
+        <p>Decisions made with citizens, not behind closed doors. Your voice shapes policy.</p>
+      </div>
+      <div class="pillar">
+        <h3>Transparency</h3>
+        <p>Open budgets, open data, open decisions. A government you can actually see.</p>
+      </div>
+      <div class="pillar">
+        <h3>Accountability</h3>
+        <p>We own our actions and our results. Clear promises, measurable outcomes.</p>
+      </div>
+      <div class="pillar">
+        <h3>Fix What's Broken</h3>
+        <p>Jobs, schools, healthcare, basic services. Practical solutions over slogans.</p>
+      </div>
+    </div>
+
+    <h2>Be Part of the Change</h2>
+    <p>Change starts with citizens who refuse to settle. Add your voice to the movement.</p>
+    <a class="btn" href="join.html">Become a Member</a>
   </div>
 </main>
 
-<footer class="orange-footer">
-  &copy; <span id="year"></span> United Citizens Party
-  <br>
-  <a href="events.html">Events</a> |
-  <a href="volunteer.html">Volunteer</a> |
-  <a href="donate.html">Donate</a> |
-  <a href="media.html">Media</a> |
-  <a href="faq.html">FAQ</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="privacy.html">Privacy Policy</a>
+<footer class="site-footer">
+  <div class="tagline">Honest Politics. Real Progress.</div>
+  <div class="links">
+    <a href="events.html">Events</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donate.html">Donate</a>
+    <a href="media.html">Media</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  <div class="copy">&copy; <span id="year"></span> United Citizens Party. Beyond left and right.</div>
 </footer>
 
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>

@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Volunteer &ndash; United Citizens Party</title>
+  <title>Volunteer - United Citizens Party</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="United Citizens Party - power to the people, transparent and accountable governance, development for every Indian. Beyond left and right.">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="orange-header">
+<header class="site-header">
   <div class="logo-area">
     <img src="assets/logo.jpg" alt="United Citizens Party Logo" class="ucp-logo">
     <span class="logo-text">United Citizens Party</span>
@@ -25,13 +26,15 @@
   </nav>
 </header>
 
-<section class="dark-hero">
+<section class="hero">
   <h1>Volunteer With Us</h1>
-  <p>Be the change you want to see.</p>
+  <p>Give your time to real change.</p>
+
 </section>
 
 <main class="container">
-  <div class="white-card">
+  <div class="card">
+    <p class="lead">Every hour counts. Tell us how you'd like to help, and we'll connect you with the right team.</p>
     <h2>Volunteer Form</h2>
     <form action="https://api.web3forms.com/submit" method="POST">
 
@@ -59,16 +62,18 @@
   </div>
 </main>
 
-<footer class="orange-footer">
-  &copy; <span id="year"></span> United Citizens Party
-  <br>
-  <a href="events.html">Events</a> |
-  <a href="volunteer.html" class="active">Volunteer</a> |
-  <a href="donate.html">Donate</a> |
-  <a href="media.html">Media</a> |
-  <a href="faq.html">FAQ</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="privacy.html">Privacy Policy</a>
+<footer class="site-footer">
+  <div class="tagline">Honest Politics. Real Progress.</div>
+  <div class="links">
+    <a href="events.html">Events</a>
+    <a href="volunteer.html" class="active">Volunteer</a>
+    <a href="donate.html">Donate</a>
+    <a href="media.html">Media</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  <div class="copy">&copy; <span id="year"></span> United Citizens Party. Beyond left and right.</div>
 </footer>
 
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>

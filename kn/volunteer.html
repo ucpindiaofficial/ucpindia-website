@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+  <meta charset="UTF-8">
+  <title>ಸ್ವಯಂಸೇವೆ - ಯುನೈಟೆಡ್ ಸಿಟಿಜನ್ಸ್ ಪಾರ್ಟಿ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo-area">
+    <img src="/assets/logo.jpg" alt="United Citizens Party Logo" class="ucp-logo">
+    <span class="logo-text">United Citizens Party</span>
+  </div>
+  <nav>
+    <a href="/kn/index.html">ಮುಖಪುಟ</a>
+    <a href="/kn/about.html">ನಮ್ಮ ಬಗ್ಗೆ</a>
+    <a href="/kn/leadership.html">ನಾಯಕತ್ವ</a>
+    <a href="/kn/vision.html">ದೃಷ್ಟಿ</a>
+    <a href="/kn/manifesto.html">ಪ್ರಣಾಳಿಕೆ</a>
+    <a href="/kn/join.html">ಸೇರಿ</a>
+  </nav>
+  <div class="lang-switch">
+    <a href="/volunteer.html">EN</a>
+    <a href="/kn/volunteer.html" class="active">ಕನ್ನಡ</a>
+    <a href="/hi/volunteer.html">हिंदी</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>ನಮ್ಮೊಂದಿಗೆ ಸ್ವಯಂಸೇವೆ</h1>
+  <p>ನಿಜ ಬದಲಾವಣೆಗೆ ನಿಮ್ಮ ಸಮಯ ನೀಡಿ.</p>
+
+</section>
+
+<main class="container">
+  <div class="card">
+    <p class="lead">ಪ್ರತಿ ಗಂಟೆಯೂ ಮುಖ್ಯ. ನೀವು ಹೇಗೆ ಸಹಾಯ ಮಾಡಲು ಬಯಸುತ್ತೀರಿ ಎಂದು ತಿಳಿಸಿ, ನಾವು ನಿಮ್ಮನ್ನು ಸೂಕ್ತ ತಂಡಕ್ಕೆ ಜೋಡಿಸುತ್ತೇವೆ.</p>
+    <h2>ಸ್ವಯಂಸೇವಕ ಅರ್ಜಿ</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+      <input type="hidden" name="access_key" value="ecea60c2-ea97-43ce-9942-a3f71d02b6f3">
+      <input type="hidden" name="redirect" value="https://ucpindia.org/kn/thankyou.html">
+      <input type="hidden" name="subject" value="New UCP Volunteer Submission">
+      <input type="hidden" name="auto_reply" value="true">
+      <input type="hidden" name="form_name" value="Volunteer Form">
+      <input type="hidden" name="page_url" value="https://ucpindia.org/kn/volunteer.html">
+      <input type="checkbox" name="botcheck" style="display:none;">
+
+      <label>ಹೆಸರು</label>
+      <input type="text" name="name" required>
+
+      <label>ಇಮೇಲ್</label>
+      <input type="email" name="email" required>
+
+      <label>ಆದ್ಯತೆಯ ಪಾತ್ರ</label>
+      <input type="text" name="role">
+      <label>ಸಂದೇಶ</label>
+      <textarea name="message" rows="4"></textarea>
+
+      <button type="submit">ಸಲ್ಲಿಸಿ</button>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="tagline">ಪ್ರಾಮಾಣಿಕ ರಾಜಕಾರಣ. ನಿಜವಾದ ಪ್ರಗತಿ.</div>
+  <div class="links">
+    <a href="/kn/events.html">ಕಾರ್ಯಕ್ರಮಗಳು</a>
+    <a href="/kn/volunteer.html" class="active">ಸ್ವಯಂಸೇವೆ</a>
+    <a href="/kn/donate.html">ದೇಣಿಗೆ</a>
+    <a href="/kn/media.html">ಮಾಧ್ಯಮ</a>
+    <a href="/kn/faq.html">ಪ್ರಶ್ನೆಗಳು</a>
+    <a href="/kn/contact.html">ಸಂಪರ್ಕ</a>
+    <a href="/kn/privacy.html">ಗೌಪ್ಯತೆ ನೀತಿ</a>
+  </div>
+  <div class="copy">&copy; <span id="year"></span> United Citizens Party. ಎಡ-ಬಲ ಪಂಥಗಳ ಆಚೆಗೆ.</div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

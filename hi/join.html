@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>जुड़ें - यूनाइटेड सिटिज़न्स पार्टी</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo-area">
+    <img src="/assets/logo.jpg" alt="United Citizens Party Logo" class="ucp-logo">
+    <span class="logo-text">United Citizens Party</span>
+  </div>
+  <nav>
+    <a href="/hi/index.html">होम</a>
+    <a href="/hi/about.html">परिचय</a>
+    <a href="/hi/leadership.html">नेतृत्व</a>
+    <a href="/hi/vision.html">दृष्टि</a>
+    <a href="/hi/manifesto.html">घोषणापत्र</a>
+    <a href="/hi/join.html" class="active">जुड़ें</a>
+  </nav>
+  <div class="lang-switch">
+    <a href="/join.html">EN</a>
+    <a href="/kn/join.html">ಕನ್ನಡ</a>
+    <a href="/hi/join.html" class="active">हिंदी</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>आंदोलन से जुड़ें</h1>
+  <p>जनता-पहले भारत का हिस्सा बनें।</p>
+
+</section>
+
+<main class="container">
+  <div class="card">
+    <p class="lead">UCP से जुड़ना किसी पार्टी का समर्थन करना नहीं है - यह तय करने में अपनी जगह वापस पाना है कि भारत कैसे चले।</p>
+
+    <h2>आप क्यों जुड़ें?</h2>
+    <div class="grid">
+      <div class="pillar"><h3>आपकी आवाज़ मायने रखती है</h3><p>हर पाँच साल में सिर्फ़ वोट नहीं - नीति और एजेंडा तय करने में मदद करें।</p></div>
+      <div class="pillar"><h3>भरोसेमंद राजनीति</h3><p>पारदर्शिता, जवाबदेही और भ्रष्टाचार के प्रति शून्य सहनशीलता वाले आंदोलन के साथ खड़े हों।</p></div>
+      <div class="pillar"><h3>वामपंथ-दक्षिणपंथ से परे</h3><p>विचारधारा या खोखले नारे नहीं - असली समस्याओं और व्यावहारिक समाधानों पर ध्यान।</p></div>
+      <div class="pillar"><h3>भविष्य का निर्माण करें</h3><p>आने वाली पीढ़ी के लिए विकास, समानता, तकनीक और टिकाऊ भारत का समर्थन करें।</p></div>
+      <div class="pillar"><h3>बदलाव स्थानीय से शुरू</h3><p>अपने समुदाय के ज़रूरी मुद्दों पर, परवाह करने वाले लोगों के साथ काम करें।</p></div>
+      <div class="pillar"><h3>सबके लिए खुला</h3><p>सदस्यता निःशुल्क और हर नागरिक के लिए खुली है, पृष्ठभूमि चाहे जो हो।</p></div>
+    </div>
+
+    <h2>सदस्य बनें</h2>
+    <p>जनता-पहले आंदोलन में अपना नाम जोड़ें। एक मिनट लगता है - और यह मायने रखता है।</p>
+    <h2>सदस्यता फ़ॉर्म</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+      <input type="hidden" name="access_key" value="ecea60c2-ea97-43ce-9942-a3f71d02b6f3">
+      <input type="hidden" name="redirect" value="https://ucpindia.org/hi/thankyou.html">
+      <input type="hidden" name="subject" value="New UCP Membership Request">
+      <input type="hidden" name="auto_reply" value="true">
+      <input type="hidden" name="form_name" value="Join Form">
+      <input type="hidden" name="page_url" value="https://ucpindia.org/hi/join.html">
+      <input type="checkbox" name="botcheck" style="display:none;">
+
+      <label>नाम</label>
+      <input type="text" name="name" required>
+
+      <label>ईमेल</label>
+      <input type="email" name="email" required>
+
+      <label>फ़ोन</label>
+      <input type="text" name="phone">
+      <label>संदेश</label>
+      <textarea name="message" rows="4"></textarea>
+
+      <button type="submit">जमा करें</button>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="tagline">ईमानदार राजनीति. वास्तविक प्रगति.</div>
+  <div class="links">
+    <a href="/hi/events.html">कार्यक्रम</a>
+    <a href="/hi/volunteer.html">स्वयंसेवा</a>
+    <a href="/hi/donate.html">दान</a>
+    <a href="/hi/media.html">मीडिया</a>
+    <a href="/hi/faq.html">सामान्य प्रश्न</a>
+    <a href="/hi/contact.html">संपर्क</a>
+    <a href="/hi/privacy.html">गोपनीयता नीति</a>
+  </div>
+  <div class="copy">&copy; <span id="year"></span> United Citizens Party. वामपंथ और दक्षिणपंथ से परे.</div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

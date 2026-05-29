@@ -36,9 +36,26 @@
 
     <h2>Membership Form</h2>
 
-    <form action="https://formsubmit.co/ucpindia.joinus@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://ucpindia.org/thankyou.html">
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="ecea60c2-ea97-43ce-9942-a3f71d02b6f3">
+
+      <!-- Redirect After Submit -->
+      <input type="hidden" name="redirect" value="https://ucpindia.org/thankyou.html">
+
+      <!-- Custom Subject -->
+      <input type="hidden" name="subject" value="New UCP Membership Request">
+
+      <!-- Auto Reply -->
+      <input type="hidden" name="auto_reply" value="true">
+
+      <!-- Metadata -->
+      <input type="hidden" name="form_name" value="Join Form">
+      <input type="hidden" name="page_url" value="https://ucpindia.org/join.html">
+
+      <!-- Honeypot Anti-Spam -->
+      <input type="checkbox" name="botcheck" style="display:none;">
 
       <label>Name</label>
       <input type="text" name="name" required placeholder="Enter your full name">

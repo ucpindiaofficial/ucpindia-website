@@ -2,59 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Join UCP – United Citizens Party</title>
+  <title>Join – United Citizens Party</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="logo">UCP • ಸಂಘಟಿತ ನಾಗರಿಕರ ಪಕ್ಷ</div>
+<header class="orange-header">
+  <div class="logo-area">
+    <img src="assets/logo.jpg" alt="United Citizens Party Logo" class="ucp-logo">
+    <span class="logo-text">United Citizens Party</span>
+  </div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
+    <a href="leadership.html">Leadership</a>
     <a href="vision.html">Vision</a>
+    <a href="manifesto.html">Manifesto</a>
     <a href="join.html" class="active">Join</a>
-    <a href="contact.html">Contact</a>
     <a href="kannada.html">ಕನ್ನಡ</a>
   </nav>
 </header>
 
-<section class="sub-hero">
-  <h1>Join UCP</h1>
+<section class="dark-hero">
+  <h1>Join the Movement</h1>
+  <p>Become a part of the United Citizens Party.</p>
 </section>
 
 <main class="container">
-  <div class="content-box">
-    <p>
-      UCP welcomes citizens who believe in transparency, accountability, and people‑powered governance.
-      Share your skills and energy to help build a better future.
-    </p>
+  <div class="white-card">
 
-    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" class="contact-form">
-      <input type="hidden" name="_subject" value="New UCP Membership Request">
+    <h2>Membership Form</h2>
 
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="phone" placeholder="Phone Number (optional)">
-      <input type="text" name="city" placeholder="City / District" required>
+    <form action="https://formsubmit.co/ucpindia.joinus@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://ucpindia.org/thankyou.html">
 
-      <textarea name="skills" rows="4" placeholder="Your Skills / How you want to contribute" required></textarea>
+      <label>Name</label>
+      <input type="text" name="name" required placeholder="Enter your full name">
 
-      <button class="btn btn-primary" type="submit">Submit Application</button>
+      <label>Email</label>
+      <input type="email" name="email" required placeholder="Enter your email">
+
+      <label>Phone</label>
+      <input type="text" name="phone" placeholder="Enter your phone number">
+
+      <label>Message</label>
+      <textarea name="message" rows="4" placeholder="Tell us why you want to join"></textarea>
+
+      <button type="submit">Submit</button>
     </form>
+
   </div>
 </main>
 
-<footer class="site-footer">
-  © <span id="year"></span> UCP – United Citizens Party
+<footer class="orange-footer">
+  © <span id="year"></span> United Citizens Party
   <br>
   <a href="events.html">Events</a> |
   <a href="volunteer.html">Volunteer</a> |
   <a href="donate.html">Donate</a> |
   <a href="media.html">Media</a> |
   <a href="faq.html">FAQ</a> |
+  <a href="contact.html">Contact</a> |
   <a href="privacy.html">Privacy Policy</a>
 </footer>
 

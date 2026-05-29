@@ -2,58 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Volunteer – UCP</title>
+  <title>Volunteer – United Citizens Party</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="logo">UCP • ಸಂಘಟಿತ ನಾಗರಿಕರ ಪಕ್ಷ</div>
+<header class="orange-header">
+  <div class="logo-area">
+    <img src="assets/logo.jpg" alt="United Citizens Party Logo" class="ucp-logo">
+    <span class="logo-text">United Citizens Party</span>
+  </div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
+    <a href="leadership.html">Leadership</a>
     <a href="vision.html">Vision</a>
+    <a href="manifesto.html">Manifesto</a>
     <a href="join.html">Join</a>
-    <a href="contact.html">Contact</a>
     <a href="kannada.html">ಕನ್ನಡ</a>
   </nav>
 </header>
 
-<section class="sub-hero">
-  <h1>Volunteer with UCP</h1>
+<section class="dark-hero">
+  <h1>Volunteer With Us</h1>
+  <p>Be the change you want to see.</p>
 </section>
 
 <main class="container">
-  <div class="content-box">
+  <div class="white-card">
 
-    <p>Volunteers are the heart of UCP. You can contribute time, skills, and ideas.</p>
+    <h2>Why Volunteer?</h2>
+    <p>
+      Volunteers are the backbone of the United Citizens Party.  
+      Your time and effort help us reach more people and create real impact.
+    </p>
 
-    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" class="contact-form">
-      <input type="hidden" name="_subject" value="New Volunteer Signup – UCP">
+    <h2>Volunteer Form</h2>
 
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="phone" placeholder="Phone Number (optional)">
-      <input type="text" name="city" placeholder="City / Area" required>
+    <form action="https://formsubmit.co/ucpindia.joinus@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://ucpindia.org/thankyou.html">
 
-      <textarea name="areas" rows="4" placeholder="Areas you want to volunteer in (outreach, research, tech, design, etc.)" required></textarea>
+      <label>Name</label>
+      <input type="text" name="name" required placeholder="Enter your full name">
 
-      <button class="btn btn-primary" type="submit">Sign Up as Volunteer</button>
+      <label>Email</label>
+      <input type="email" name="email" required placeholder="Enter your email">
+
+      <label>Preferred Role</label>
+      <input type="text" name="role" placeholder="E.g., Event Support, Outreach, Social Media">
+
+      <label>Message</label>
+      <textarea name="message" rows="4" placeholder="Tell us why you want to volunteer"></textarea>
+
+      <button type="submit">Submit</button>
     </form>
 
   </div>
 </main>
 
-<footer class="site-footer">
-  © <span id="year"></span> UCP – United Citizens Party
+<footer class="orange-footer">
+  © <span id="year"></span> United Citizens Party
   <br>
   <a href="events.html">Events</a> |
-  <a href="volunteer.html">Volunteer</a> |
+  <a href="volunteer.html" class="active">Volunteer</a> |
   <a href="donate.html">Donate</a> |
   <a href="media.html">Media</a> |
   <a href="faq.html">FAQ</a> |
+  <a href="contact.html">Contact</a> |
   <a href="privacy.html">Privacy Policy</a>
 </footer>
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Join – United Citizens Party</title>
+  <title>Join &ndash; United Citizens Party</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,7 +14,6 @@
     <img src="assets/logo.jpg" alt="United Citizens Party Logo" class="ucp-logo">
     <span class="logo-text">United Citizens Party</span>
   </div>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -33,50 +32,35 @@
 
 <main class="container">
   <div class="white-card">
-
     <h2>Membership Form</h2>
-
     <form action="https://api.web3forms.com/submit" method="POST">
 
-      <!-- Web3Forms Access Key -->
       <input type="hidden" name="access_key" value="ecea60c2-ea97-43ce-9942-a3f71d02b6f3">
-
-      <!-- Redirect After Submit -->
       <input type="hidden" name="redirect" value="https://ucpindia.org/thankyou.html">
-
-      <!-- Custom Subject -->
       <input type="hidden" name="subject" value="New UCP Membership Request">
-
-      <!-- Auto Reply -->
       <input type="hidden" name="auto_reply" value="true">
-
-      <!-- Metadata -->
       <input type="hidden" name="form_name" value="Join Form">
       <input type="hidden" name="page_url" value="https://ucpindia.org/join.html">
-
-      <!-- Honeypot Anti-Spam -->
       <input type="checkbox" name="botcheck" style="display:none;">
 
       <label>Name</label>
-      <input type="text" name="name" required placeholder="Enter your full name">
+      <input type="text" name="name" required>
 
       <label>Email</label>
-      <input type="email" name="email" required placeholder="Enter your email">
+      <input type="email" name="email" required>
 
       <label>Phone</label>
-      <input type="text" name="phone" placeholder="Enter your phone number">
-
+      <input type="text" name="phone">
       <label>Message</label>
-      <textarea name="message" rows="4" placeholder="Tell us why you want to join"></textarea>
+      <textarea name="message" rows="4"></textarea>
 
       <button type="submit">Submit</button>
     </form>
-
   </div>
 </main>
 
 <footer class="orange-footer">
-  © <span id="year"></span> United Citizens Party
+  &copy; <span id="year"></span> United Citizens Party
   <br>
   <a href="events.html">Events</a> |
   <a href="volunteer.html">Volunteer</a> |
@@ -87,9 +71,7 @@
   <a href="privacy.html">Privacy Policy</a>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

@@ -1,39 +1,67 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Our Team - UCP India</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Our Team &ndash; United Citizens Party</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>UCP India</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="vision.html">Vision</a></li>
-            <li><a href="manifesto.html">Manifesto</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="kannada.html">Kannada</a></li>
-        </ul>
-    </nav>
+<header class="orange-header">
+  <div class="logo-area">
+    <img src="assets/logo.jpg" alt="United Citizens Party Logo" class="ucp-logo">
+    <span class="logo-text">United Citizens Party</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="vision.html">Vision</a>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="join.html">Join</a>
+    <a href="kannada.html">ಕನ್ನಡ</a>
+  </nav>
 </header>
 
-<section class="hero">
-    <h2>Our Team</h2>
-    <p>People behind UCP</p>
+<section class="dark-hero">
+  <h1>Our Team</h1>
+  <p>The people behind the United Citizens Party.</p>
 </section>
 
-<main>
-<p>Team content.</p>
+<main class="container">
+  <div class="white-card">
+    <h2>People Behind UCP</h2>
+    <p>
+      Our team is made up of citizens, volunteers, and organizers committed to transparent,
+      accountable governance. Full profiles will be published here soon.
+    </p>
+
+    <h2>Roles</h2>
+    <ul>
+      <li>Coordination &amp; Operations &ndash; TBD</li>
+      <li>Outreach &amp; Volunteers &ndash; TBD</li>
+      <li>Media &amp; Communications &ndash; TBD</li>
+    </ul>
+
+    <p>Want to be part of the team? <a href="volunteer.html">Volunteer with us</a>.</p>
+  </div>
 </main>
 
-<footer>
-    Â© UCP India â€” United Citizens Party of India
+<footer class="orange-footer">
+  &copy; <span id="year"></span> United Citizens Party
+  <br>
+  <a href="events.html">Events</a> |
+  <a href="volunteer.html">Volunteer</a> |
+  <a href="donate.html">Donate</a> |
+  <a href="media.html">Media</a> |
+  <a href="faq.html">FAQ</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="privacy.html">Privacy Policy</a>
 </footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

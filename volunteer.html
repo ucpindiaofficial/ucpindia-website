@@ -43,7 +43,18 @@
 <main class="container">
   <div class="card">
     <p class="lead">Every hour counts. Tell us how you'd like to help, and we'll connect you with the right team.</p>
-    <h2>Volunteer Form</h2>
+    <div class="join-layout">
+      <div class="join-why">
+        <h2>Why Volunteer?</h2>
+        <div class="grid">
+          <div class="pillar"><h3>Make a Real Difference</h3><p>Help solve real problems in your own community.</p></div>
+          <div class="pillar"><h3>Flexible &amp; Local</h3><p>Give as much time as you can, close to home.</p></div>
+          <div class="pillar"><h3>Learn &amp; Grow</h3><p>Gain skills in organizing, communication, and leadership.</p></div>
+          <div class="pillar"><h3>Honest Company</h3><p>Work alongside people who care about clean, accountable politics.</p></div>
+        </div>
+      </div>
+      <div class="join-form">
+        <h2>Volunteer Form</h2>
     <form action="https://api.web3forms.com/submit" method="POST" onsubmit="this.subject.value=(this.state.value||'')+' : '+(this.city.value||'')+' : Volunteer Request';">
 
       <input type="hidden" name="access_key" value="ecea60c2-ea97-43ce-9942-a3f71d02b6f3">
@@ -126,6 +137,8 @@
 
       <button type="submit">Submit</button>
     </form>
+      </div>
+    </div>
   </div>
 </main>
 

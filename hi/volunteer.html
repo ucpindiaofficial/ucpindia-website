@@ -43,7 +43,18 @@
 <main class="container">
   <div class="card">
     <p class="lead">हर घंटा मायने रखता है। बताएँ कि आप कैसे मदद करना चाहते हैं, और हम आपको सही टीम से जोड़ेंगे।</p>
-    <h2>स्वयंसेवक फ़ॉर्म</h2>
+    <div class="join-layout">
+      <div class="join-why">
+        <h2>स्वयंसेवा क्यों करें?</h2>
+        <div class="grid">
+          <div class="pillar"><h3>असली बदलाव लाएँ</h3><p>अपने समुदाय की असली समस्याओं को हल करने में मदद करें।</p></div>
+          <div class="pillar"><h3>लचीला और स्थानीय</h3><p>जितना समय दे सकें, घर के पास।</p></div>
+          <div class="pillar"><h3>सीखें और बढ़ें</h3><p>संगठन, संचार और नेतृत्व के कौशल सीखें।</p></div>
+          <div class="pillar"><h3>ईमानदार साथ</h3><p>स्वच्छ, जवाबदेह राजनीति की परवाह करने वालों के साथ काम करें।</p></div>
+        </div>
+      </div>
+      <div class="join-form">
+        <h2>स्वयंसेवक फ़ॉर्म</h2>
     <form action="https://api.web3forms.com/submit" method="POST" onsubmit="this.subject.value=(this.state.value||'')+' : '+(this.city.value||'')+' : Volunteer Request';">
 
       <input type="hidden" name="access_key" value="ecea60c2-ea97-43ce-9942-a3f71d02b6f3">
@@ -126,6 +137,8 @@
 
       <button type="submit">जमा करें</button>
     </form>
+      </div>
+    </div>
   </div>
 </main>
 

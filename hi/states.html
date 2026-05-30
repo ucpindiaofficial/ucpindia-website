@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>राज्य - यूनाइटेड सिटिज़न्स पार्टी</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo-area">
+    <img src="/assets/logo.jpg" alt="United Citizens Party Logo" class="ucp-logo">
+    <span class="logo-text">United Citizens Party</span>
+  </div>
+  <nav>
+    <a href="/hi/index.html">होम</a>
+    <a href="/hi/about.html">परिचय</a>
+    <a href="/hi/leadership.html">नेतृत्व</a>
+    <a href="/hi/vision.html">दृष्टि</a>
+    <a href="/hi/manifesto.html">घोषणापत्र</a>
+    <a href="/hi/states.html" class="active">राज्य</a>
+    <a href="/hi/join.html">जुड़ें</a>
+  </nav>
+  <div class="lang-switch">
+    <a href="/states.html">EN</a>
+    <a href="/kn/states.html">ಕನ್ನಡ</a>
+    <a href="/hi/states.html" class="active">हिंदी</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>पूरे भारत में UCP</h1>
+  <p>अपने राज्य में पार्टी खोजें।</p>
+
+</section>
+
+<main class="container">
+  <div class="card">
+    <p class="lead">यह देखने के लिए कि UCP आपके राज्य में कैसे संगठित है, अपना राज्य चुनें। डिफ़ॉल्ट रूप से कर्नाटक दिखाया गया है।</p>
+    <label for="stateSelect"><strong>अपना राज्य चुनें:</strong></label>
+    <select id="stateSelect" onchange="ucpShowState(this.value)">
+      <option value="Karnataka" selected>Karnataka</option>
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+      <option value="Assam">Assam</option>
+      <option value="Bihar">Bihar</option>
+      <option value="Chhattisgarh">Chhattisgarh</option>
+      <option value="Goa">Goa</option>
+      <option value="Gujarat">Gujarat</option>
+      <option value="Haryana">Haryana</option>
+      <option value="Himachal Pradesh">Himachal Pradesh</option>
+      <option value="Jharkhand">Jharkhand</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Manipur">Manipur</option>
+      <option value="Meghalaya">Meghalaya</option>
+      <option value="Mizoram">Mizoram</option>
+      <option value="Nagaland">Nagaland</option>
+      <option value="Odisha">Odisha</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Sikkim">Sikkim</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Telangana">Telangana</option>
+      <option value="Tripura">Tripura</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      <option value="Uttarakhand">Uttarakhand</option>
+      <option value="West Bengal">West Bengal</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+      <option value="Ladakh">Ladakh</option>
+      <option value="Puducherry">Puducherry</option>
+      <option value="Chandigarh">Chandigarh</option>
+      <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+      <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+      <option value="Lakshadweep">Lakshadweep</option>
+    </select>
+
+    <div class="state-panel" id="st-Karnataka">
+    <h2>कर्नाटक में UCP</h2>
+    <p class="lead">हमारा आंदोलन कर्नाटक से शुरू हुआ। पूरे राज्य में हम कैसे संगठित हैं, यह यहाँ है।</p>
+    <h2>राज्य नेतृत्व</h2>
+    <p>हमारी कर्नाटक राज्य टीम आंदोलन का समन्वय करती है, स्थानीय इकाइयों का समर्थन करती है और सदस्यों की चिंताओं का प्रतिनिधित्व करती है। विवरण जल्द प्रकाशित किए जाएँगे।</p>
+    <h2>स्थानीय इकाइयाँ</h2>
+    <p>हम बेंगलुरु, मैसूरु, मंगलुरु, हुबली-धारवाड़, कलबुर्गी और अन्य जगहों पर ज़िला और शहर इकाइयाँ बना रहे हैं। हर इकाई स्थानीय मुद्दों के इर्द-गिर्द नागरिकों को संगठित करती है।</p>
+    <h2>जुड़े रहें</h2>
+    <p>अपडेट, बैठकों और स्वयंसेवा के लिए हमारे कर्नाटक समुदाय चैनलों से जुड़ें। अपने नज़दीकी इकाई से जुड़ने के लिए <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर लिखें।</p>
+    <h2>कार्यक्रम और तस्वीरें</h2>
+    <p>हमारे कर्नाटक कार्यक्रमों की झलकियाँ यहाँ दिखेंगी।</p>
+    <div class="gallery"><div class="ph">तस्वीर जल्द</div><div class="ph">तस्वीर जल्द</div><div class="ph">तस्वीर जल्द</div></div>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">इकाई शुरू करें / जुड़ें</a></p>    </div>
+    <div class="state-panel" id="st-AndhraPradesh" hidden>
+    <h2>Andhra Pradesh में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Andhra Pradesh।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Andhra Pradesh में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-ArunachalPradesh" hidden>
+    <h2>Arunachal Pradesh में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Arunachal Pradesh।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Arunachal Pradesh में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Assam" hidden>
+    <h2>Assam में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Assam।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Assam में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Bihar" hidden>
+    <h2>Bihar में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Bihar।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Bihar में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Chhattisgarh" hidden>
+    <h2>Chhattisgarh में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Chhattisgarh।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Chhattisgarh में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Goa" hidden>
+    <h2>Goa में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Goa।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Goa में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Gujarat" hidden>
+    <h2>Gujarat में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Gujarat।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Gujarat में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Haryana" hidden>
+    <h2>Haryana में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Haryana।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Haryana में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-HimachalPradesh" hidden>
+    <h2>Himachal Pradesh में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Himachal Pradesh।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Himachal Pradesh में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Jharkhand" hidden>
+    <h2>Jharkhand में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Jharkhand।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Jharkhand में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Kerala" hidden>
+    <h2>Kerala में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Kerala।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Kerala में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-MadhyaPradesh" hidden>
+    <h2>Madhya Pradesh में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Madhya Pradesh।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Madhya Pradesh में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Maharashtra" hidden>
+    <h2>Maharashtra में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Maharashtra।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Maharashtra में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Manipur" hidden>
+    <h2>Manipur में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Manipur।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Manipur में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Meghalaya" hidden>
+    <h2>Meghalaya में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Meghalaya।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Meghalaya में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Mizoram" hidden>
+    <h2>Mizoram में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Mizoram।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Mizoram में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Nagaland" hidden>
+    <h2>Nagaland में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Nagaland।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Nagaland में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Odisha" hidden>
+    <h2>Odisha में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Odisha।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Odisha में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Punjab" hidden>
+    <h2>Punjab में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Punjab।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Punjab में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Rajasthan" hidden>
+    <h2>Rajasthan में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Rajasthan।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Rajasthan में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Sikkim" hidden>
+    <h2>Sikkim में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Sikkim।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Sikkim में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-TamilNadu" hidden>
+    <h2>Tamil Nadu में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Tamil Nadu।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Tamil Nadu में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Telangana" hidden>
+    <h2>Telangana में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Telangana।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Telangana में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Tripura" hidden>
+    <h2>Tripura में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Tripura।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Tripura में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-UttarPradesh" hidden>
+    <h2>Uttar Pradesh में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Uttar Pradesh।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Uttar Pradesh में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Uttarakhand" hidden>
+    <h2>Uttarakhand में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Uttarakhand।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Uttarakhand में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-WestBengal" hidden>
+    <h2>West Bengal में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है West Bengal।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>West Bengal में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Delhi" hidden>
+    <h2>Delhi में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Delhi।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Delhi में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-JammuandKashmir" hidden>
+    <h2>Jammu and Kashmir में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Jammu and Kashmir।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Jammu and Kashmir में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Ladakh" hidden>
+    <h2>Ladakh में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Ladakh।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Ladakh में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Puducherry" hidden>
+    <h2>Puducherry में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Puducherry।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Puducherry में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Chandigarh" hidden>
+    <h2>Chandigarh में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Chandigarh।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Chandigarh में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-AndamanandNicobarIslands" hidden>
+    <h2>Andaman and Nicobar Islands में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Andaman and Nicobar Islands।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Andaman and Nicobar Islands में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-DadraandNagarHaveliandDamanandDiu" hidden>
+    <h2>Dadra and Nagar Haveli and Daman and Diu में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Dadra and Nagar Haveli and Daman and Diu।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Dadra and Nagar Haveli and Daman and Diu में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+    <div class="state-panel" id="st-Lakshadweep" hidden>
+    <h2>Lakshadweep में UCP</h2>
+    <p class="lead">हम पूरे भारत में बढ़ रहे हैं - और अगला है Lakshadweep।</p>
+    <p>UCP यहाँ अभी औपचारिक रूप से संगठित नहीं है, यानी इसे शुरू से आकार देने का आपके लिए एक वास्तविक अवसर है।</p>
+    <h2>शुरुआत में मदद करें</h2>
+    <p>Lakshadweep में संस्थापक सदस्य बनें। स्थानीय इकाई शुरू करने, परवाह करने वाले नागरिकों से जुड़ने और अपने राज्य में ईमानदार, जवाबदेह राजनीति लाने में मदद करें।</p>
+    <p><a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a> पर संपर्क करें, या नीचे आंदोलन से जुड़ें।</p>
+    <p style="margin-top:18px;"><a class="btn" href="/hi/join.html">संस्थापक सदस्य बनें</a></p>    </div>
+
+    <script>
+      function ucpShowState(s){
+        var id='st-'+s.replace(/[^A-Za-z0-9]/g,'');
+        var ps=document.querySelectorAll('.state-panel');
+        for(var i=0;i<ps.length;i++){ ps[i].hidden = (ps[i].id!==id); }
+        if(history.replaceState){ history.replaceState(null,'','#'+encodeURIComponent(s)); }
+      }
+      (function(){
+        var h=decodeURIComponent((location.hash||'').replace('#',''));
+        if(!h){ return; }
+        var sel=document.getElementById('stateSelect'); var ok=false;
+        for(var i=0;i<sel.options.length;i++){ if(sel.options[i].value===h){ sel.value=h; ok=true; } }
+        if(ok){ ucpShowState(h); }
+      })();
+    </script>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="tagline">ईमानदार राजनीति. वास्तविक प्रगति.</div>
+  <div class="links">
+    <a href="/hi/events.html">कार्यक्रम</a>
+    <a href="/hi/volunteer.html">स्वयंसेवा</a>
+    <a href="/hi/donate.html">दान</a>
+    <a href="/hi/media.html">मीडिया</a>
+    <a href="/hi/faq.html">सामान्य प्रश्न</a>
+    <a href="/hi/contact.html">संपर्क</a>
+    <a href="/hi/privacy.html">गोपनीयता नीति</a>
+  </div>
+  <div class="copy">&copy; <span id="year"></span> United Citizens Party. वामपंथ और दक्षिणपंथ से परे.</div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

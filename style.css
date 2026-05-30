@@ -86,6 +86,15 @@ form input:focus, form textarea:focus { outline: 2px solid var(--accent); border
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin-top: 12px; }
 .gallery .ph { background: var(--bg); border: 1px dashed var(--line); border-radius: 10px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: var(--slate); font-size: .85rem; }
 
+/* JOIN PAGE: form left, reasons right (desktop); stacked on mobile */
+.join-layout { display: grid; gap: 30px; }
+@media (min-width: 760px) {
+  .join-layout { grid-template-columns: 1fr 1fr; align-items: start; }
+  .join-form { grid-column: 1; grid-row: 1; }
+  .join-why  { grid-column: 2; grid-row: 1; }
+}
+.join-why .grid { margin-top: 14px; }
+
 /* FOOTER */
 .site-footer { background: var(--ink); color: #cbd5e1; padding: 30px 20px; text-align: center; margin-top: 48px; }
 .site-footer .tagline { color: #fff; font-weight: 700; margin-bottom: 12px; letter-spacing: .3px; }

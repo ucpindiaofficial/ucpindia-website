@@ -29,7 +29,7 @@
     <a href="/hi/vision.html">दृष्टि</a>
     <a href="/hi/manifesto.html">घोषणापत्र</a>
     <a href="/hi/states.html">इकाइयाँ</a>
-    <a href="/hi/join.html" class="join active">जुड़ें</a>
+    <a href="/hi/join.html" class="join active">हमसे जुड़ें</a>
   </nav>
 </header>
 
@@ -41,6 +41,8 @@
 
 <main class="container">
   <div class="card">
+    <div class="join-layout">
+      <div class="join-why">
     <p class="lead">UCP से जुड़ना किसी पार्टी का समर्थन करना नहीं है - यह तय करने में अपनी जगह वापस पाना है कि भारत कैसे चले।</p>
 
     <h2>आप क्यों जुड़ें?</h2>
@@ -52,10 +54,9 @@
       <div class="pillar"><h3>बदलाव स्थानीय से शुरू</h3><p>अपने समुदाय के ज़रूरी मुद्दों पर, परवाह करने वाले लोगों के साथ काम करें।</p></div>
       <div class="pillar"><h3>सबके लिए खुला</h3><p>सदस्यता निःशुल्क और हर नागरिक के लिए खुली है, पृष्ठभूमि चाहे जो हो।</p></div>
     </div>
-
-    <h2>सदस्य बनें</h2>
-    <p>जनता-पहले आंदोलन में अपना नाम जोड़ें। एक मिनट लगता है - और यह मायने रखता है।</p>
-    <h2>सदस्यता फ़ॉर्म</h2>
+      </div>
+      <div class="join-form">
+        <h2>सदस्यता फ़ॉर्म</h2>
     <form action="https://api.web3forms.com/submit" method="POST" onsubmit="this.subject.value=(this.state.value||'')+' : '+(this.city.value||'')+' : Membership Request';">
 
       <input type="hidden" name="access_key" value="ecea60c2-ea97-43ce-9942-a3f71d02b6f3">
@@ -123,6 +124,8 @@
 
       <button type="submit">जमा करें</button>
     </form>
+      </div>
+    </div>
   </div>
 </main>
 

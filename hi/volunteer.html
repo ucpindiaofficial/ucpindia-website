@@ -26,6 +26,7 @@
     <a href="/hi/index.html">होम</a>
     <a href="/hi/about.html">परिचय</a>
     <a href="/hi/leadership.html">नेतृत्व</a>
+    <a href="/hi/organization.html">संगठन</a>
     <a href="/hi/vision.html">दृष्टि</a>
     <a href="/hi/manifesto.html">घोषणापत्र</a>
     <a href="/hi/states.html">इकाइयाँ</a>
@@ -60,7 +61,22 @@
       <input type="email" name="email" required>
 
       <label>पसंदीदा भूमिका</label>
-      <input type="text" name="role">
+      <select name="role" required>
+        <option value="" disabled selected>भूमिका चुनें</option>
+        <option value="Booth / Ward Volunteer">Booth / Ward Volunteer</option>
+        <option value="Constituency Coordinator">Constituency Coordinator</option>
+        <option value="District Coordinator">District Coordinator</option>
+        <option value="Field & Outreach">Field & Outreach</option>
+        <option value="Social Media & Digital">Social Media & Digital</option>
+        <option value="Content & Design">Content & Design</option>
+        <option value="Membership">Membership</option>
+        <option value="Events">Events</option>
+        <option value="Finance & Compliance">Finance & Compliance</option>
+        <option value="Policy & Research">Policy & Research</option>
+        <option value="Legal">Legal</option>
+        <option value="Tech & Data">Tech & Data</option>
+        <option value="Other">Other</option>
+      </select>
       <label>राज्य</label>
       <select name="state" required>
         <option value="" disabled selected>अपना राज्य चुनें</option>

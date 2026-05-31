@@ -11,14 +11,6 @@
 
 <body>
 
-<div class="topbar">
-  <div class="lang-switch">
-    <a href="/index.html">EN</a>
-    <a href="/kn/index.html">ಕನ್ನಡ</a>
-    <a href="/hi/index.html" class="active">हिंदी</a>
-  </div>
-</div>
-
 <header class="site-header">
   <div class="logo-area">
     <img src="/assets/logo.jpg" alt="United Citizens Party Logo" class="ucp-logo">
@@ -34,6 +26,14 @@
     <a href="/hi/states.html">इकाइयाँ</a>
     <a href="/hi/join.html" class="join">हमसे जुड़ें</a>
   </nav>
+  <details class="lang-dd">
+    <summary>&#127760; हिंदी &#9662;</summary>
+    <div class="lang-menu">
+    <a href="/index.html">EN</a>
+    <a href="/kn/index.html">ಕನ್ನಡ</a>
+    <a href="/hi/index.html" class="active">हिंदी</a>
+    </div>
+  </details>
 </header>
 
 <section class="hero">
@@ -45,7 +45,7 @@
   </div>
 </section>
 
-<div class="ticker"><div class="track"><span>शिक्षा</span><span>स्वास्थ्य</span><span>महिला सुरक्षा</span><span>बच्चे</span><span>युवा</span><span>किसान</span><span>रोज़गार</span><span>आत्मनिर्भरता</span><span>स्वच्छ शासन</span><span>समानता</span><span>शिक्षा</span><span>स्वास्थ्य</span><span>महिला सुरक्षा</span><span>बच्चे</span><span>युवा</span><span>किसान</span><span>रोज़गार</span><span>आत्मनिर्भरता</span><span>स्वच्छ शासन</span><span>समानता</span></div></div>
+<div class="ticker"><div class="track"><span>शिक्षा</span><span>स्वास्थ्य</span><span>किसान</span><span>रोज़गार</span><span>अवसंरचना</span><span>शासन</span><span>पारदर्शिता</span><span>विकेंद्रीकरण</span><span>शिक्षा</span><span>स्वास्थ्य</span><span>किसान</span><span>रोज़गार</span><span>अवसंरचना</span><span>शासन</span><span>पारदर्शिता</span><span>विकेंद्रीकरण</span></div></div>
 
 <main class="container">
   <div class="card">
@@ -91,7 +91,7 @@
   (function(){
     if (!('IntersectionObserver' in window)) return;
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var els = document.querySelectorAll('.card');
+    var els = document.querySelectorAll('.card, .pillar');
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: 0.08 });

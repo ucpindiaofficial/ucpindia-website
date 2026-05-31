@@ -11,14 +11,6 @@
 
 <body>
 
-<div class="topbar">
-  <div class="lang-switch">
-    <a href="/media.html">EN</a>
-    <a href="/kn/media.html">ಕನ್ನಡ</a>
-    <a href="/hi/media.html" class="active">हिंदी</a>
-  </div>
-</div>
-
 <header class="site-header">
   <div class="logo-area">
     <img src="/assets/logo.jpg" alt="United Citizens Party Logo" class="ucp-logo">
@@ -34,6 +26,14 @@
     <a href="/hi/states.html">इकाइयाँ</a>
     <a href="/hi/join.html" class="join">हमसे जुड़ें</a>
   </nav>
+  <details class="lang-dd">
+    <summary>&#127760; हिंदी &#9662;</summary>
+    <div class="lang-menu">
+    <a href="/media.html">EN</a>
+    <a href="/kn/media.html">ಕನ್ನಡ</a>
+    <a href="/hi/media.html" class="active">हिंदी</a>
+    </div>
+  </details>
 </header>
 
 <section class="hero">
@@ -78,7 +78,7 @@
   (function(){
     if (!('IntersectionObserver' in window)) return;
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var els = document.querySelectorAll('.card');
+    var els = document.querySelectorAll('.card, .pillar');
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: 0.08 });

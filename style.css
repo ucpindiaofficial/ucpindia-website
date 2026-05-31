@@ -40,7 +40,7 @@ nav a.join.active { background: var(--accent-dark); color: #fff; }
 .lang-switch a.active { background: var(--accent); color: #fff; }
 
 /* HERO */
-.hero { background: linear-gradient(135deg, var(--indigo) 0%, var(--teal) 100%); color: #fff; text-align: center; padding: 66px 20px 96px; }
+.hero { background: linear-gradient(135deg, var(--indigo) 0%, var(--teal) 100%); color: #fff; text-align: center; padding: 60px 20px; }
 .hero h1 { margin: 0 0 14px; font-size: 2.6rem; font-weight: 800; letter-spacing: -.5px; line-height: 1.12; }
 .hero p { margin: 0 auto; max-width: 680px; font-size: 1.15rem; opacity: .92; }
 .cta { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
@@ -57,7 +57,7 @@ nav a.join.active { background: var(--accent-dark); color: #fff; }
 .card button { margin-top: 18px; }
 
 /* CONTENT */
-.container { max-width: 1040px; margin: -52px auto 40px; padding: 0 16px; position: relative; }
+.container { max-width: 1040px; margin: 30px auto 40px; padding: 0 16px; position: relative; }
 .card { background: var(--card); padding: 36px; border-radius: 16px; box-shadow: 0 12px 40px rgba(15,23,42,.10); }
 .card h2 { font-size: 1.5rem; margin: 1.7em 0 .4em; color: var(--ink); }
 .card h2:first-child { margin-top: 0; }
@@ -104,6 +104,29 @@ form input:focus, form textarea:focus { outline: 2px solid var(--accent); border
 .site-footer a.active { color: #fff; font-weight: 600; }
 .site-footer .copy { font-size: .82rem; opacity: .6; margin-top: 14px; }
 
+/* ANIMATION: hero gradient + load fade + scroll reveal */
+@media (prefers-reduced-motion: no-preference) {
+  .hero { background-size: 200% 200%; animation: ucpGradient 16s ease infinite; }
+  @keyframes ucpGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+  .hero h1 { animation: ucpUp .7s ease both; }
+  .hero p { animation: ucpUp .7s ease .12s both; }
+  .hero .cta { animation: ucpUp .7s ease .24s both; }
+  @keyframes ucpUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  .js .card { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+  .js .card.in { opacity: 1; transform: none; }
+}
+
+/* PRIORITIES TICKER (home) */
+.ticker { background: var(--ink); color: #fff; overflow: hidden; white-space: nowrap; }
+.ticker .track { display: inline-block; padding: 11px 0; }
+.ticker .track span { font-weight: 600; font-size: .95rem; }
+.ticker .track span::before { content: "\2022"; color: var(--accent); margin: 0 24px; }
+@media (prefers-reduced-motion: no-preference) {
+  .ticker .track { animation: ucpTicker 34s linear infinite; }
+  .ticker:hover .track { animation-play-state: paused; }
+}
+@keyframes ucpTicker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
 /* MOBILE */
 @media (max-width: 640px) {
   .topbar { padding: 5px 14px; justify-content: flex-end; }
@@ -113,11 +136,11 @@ form input:focus, form textarea:focus { outline: 2px solid var(--accent); border
   .logo-text { font-size: 1rem; }
   nav { width: 100%; justify-content: center; gap: 6px; }
   nav a { font-size: .9rem; padding: 6px 11px; }
-  .hero { padding: 34px 16px 60px; }
+  .hero { padding: 34px 16px; }
   .hero h1 { font-size: 1.65rem; }
   .hero p { font-size: 1rem; }
   .cta { flex-direction: column; align-items: stretch; }
-  .container { margin-top: -34px; padding: 0 12px; }
+  .container { margin-top: 22px; padding: 0 12px; }
   .card { padding: 20px; }
   .card h2 { font-size: 1.3rem; }
   .lead { font-size: 1.05rem; }

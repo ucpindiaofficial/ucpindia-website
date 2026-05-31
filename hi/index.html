@@ -2,12 +2,13 @@
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <title>यूनाइटेड सिटिज़न्स पार्टी</title>
+  <title>United Citizens Party</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/style.css">
-    <!-- Favicon -->
   <link rel="icon" type="image/jpg" href="/assets/logo.jpg">
+  <script>if('IntersectionObserver' in window){document.documentElement.classList.add('js');}</script>
 </head>
+
 <body>
 
 <div class="topbar">
@@ -43,6 +44,8 @@
     <a class="btn btn-outline" href="/hi/vision.html">हमारी दृष्टि</a>
   </div>
 </section>
+
+<div class="ticker"><div class="track"><span>शिक्षा</span><span>स्वास्थ्य</span><span>महिला सुरक्षा</span><span>बच्चे</span><span>युवा</span><span>किसान</span><span>रोज़गार</span><span>आत्मनिर्भरता</span><span>स्वच्छ शासन</span><span>समानता</span><span>शिक्षा</span><span>स्वास्थ्य</span><span>महिला सुरक्षा</span><span>बच्चे</span><span>युवा</span><span>किसान</span><span>रोज़गार</span><span>आत्मनिर्भरता</span><span>स्वच्छ शासन</span><span>समानता</span></div></div>
 
 <main class="container">
   <div class="card">
@@ -83,7 +86,18 @@
   <div class="copy">&copy; <span id="year"></span> United Citizens Party. वामपंथ और दक्षिणपंथ से परे.</div>
 </footer>
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  (function(){
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var els = document.querySelectorAll('.card');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    for (var i=0;i<els.length;i++){ io.observe(els[i]); }
+  })();
+</script>
 
 </body>
 </html>

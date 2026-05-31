@@ -2,9 +2,11 @@
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <title>संगठन - यूनाइटेड सिटिज़न्स पार्टी</title>
+  <title>United Citizens Party</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/jpg" href="/assets/logo.jpg">
+  <script>if('IntersectionObserver' in window){document.documentElement.classList.add('js');}</script>
 </head>
 
 <body>
@@ -39,6 +41,8 @@
   <p>सरल, स्वयंसेवक-संचालित और बढ़ने के लिए तैयार।</p>
 
 </section>
+
+
 
 <main class="container">
   <div class="card">
@@ -105,7 +109,18 @@
   <div class="copy">&copy; <span id="year"></span> United Citizens Party. वामपंथ और दक्षिणपंथ से परे.</div>
 </footer>
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  (function(){
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var els = document.querySelectorAll('.card');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    for (var i=0;i<els.length;i++){ io.observe(els[i]); }
+  })();
+</script>
 
 </body>
 </html>

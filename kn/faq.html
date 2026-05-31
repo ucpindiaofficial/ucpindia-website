@@ -2,9 +2,11 @@
 <html lang="kn">
 <head>
   <meta charset="UTF-8">
-  <title>ಪ್ರಶ್ನೆಗಳು - ಯುನೈಟೆಡ್ ಸಿಟಿಜನ್ಸ್ ಪಾರ್ಟಿ</title>
+  <title>United Citizens Party</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/jpg" href="/assets/logo.jpg">
+  <script>if('IntersectionObserver' in window){document.documentElement.classList.add('js');}</script>
 </head>
 
 <body>
@@ -40,6 +42,8 @@
 
 </section>
 
+
+
 <main class="container">
   <div class="card">
     <h2>UCP ಯಾವುದಕ್ಕಾಗಿ ನಿಲ್ಲುತ್ತದೆ?</h2>
@@ -71,7 +75,18 @@
   <div class="copy">&copy; <span id="year"></span> United Citizens Party. ಎಡ-ಬಲ ಪಂಥಗಳ ಆಚೆಗೆ.</div>
 </footer>
 
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  (function(){
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var els = document.querySelectorAll('.card');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    for (var i=0;i<els.length;i++){ io.observe(els[i]); }
+  })();
+</script>
 
 </body>
 </html>

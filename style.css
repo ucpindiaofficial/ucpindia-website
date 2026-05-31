@@ -149,6 +149,46 @@ nav a.active::after, nav a.join::after { display: none; }
 }
 @keyframes ucpTicker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
+/* FAQ HELPER BOT */
+.bot-toggle { position: fixed; right: 18px; bottom: 18px; z-index: 80; width: 60px; height: 60px; padding: 0; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--indigo), var(--teal)); color: #fff; border: 0; cursor: pointer; box-shadow: 0 10px 26px rgba(15,23,42,.35); transition: .15s; }
+.bot-toggle .bot-toggle-ic { display: inline-flex; line-height: 0; }
+.bot-toggle:hover { transform: translateY(-2px) scale(1.06); filter: brightness(1.06); }
+@media (prefers-reduced-motion: no-preference) {
+  .bot-toggle { animation: botBob 2.6s ease-in-out infinite; }
+  .bot-toggle::after { content: ""; position: absolute; inset: 0; border-radius: 50%; box-shadow: 0 0 0 0 rgba(6,182,212,.55); animation: botRing 2.6s ease-out infinite; pointer-events: none; }
+  .bot-toggle:hover, .bot-toggle:hover::after { animation: none; }
+  @keyframes botBob { 0%, 30%, 100% { transform: translateY(0); } 8% { transform: translateY(-7px); } 16% { transform: translateY(0); } 22% { transform: translateY(-4px); } }
+  @keyframes botRing { 0% { box-shadow: 0 0 0 0 rgba(6,182,212,.5); } 70% { box-shadow: 0 0 0 16px rgba(6,182,212,0); } 100% { box-shadow: 0 0 0 0 rgba(6,182,212,0); } }
+}
+.bot-panel { position: fixed; right: 18px; bottom: 84px; z-index: 80; width: min(330px, calc(100vw - 36px)); background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 18px 50px rgba(15,23,42,.28); overflow: hidden; display: flex; flex-direction: column; max-height: min(520px, calc(100vh - 120px)); }
+.bot-panel[hidden] { display: none; }
+.bot-head { background: linear-gradient(135deg, var(--indigo), var(--teal)); color: #fff; padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; }
+.bot-head-t { display: flex; flex-direction: column; line-height: 1.2; }
+.bot-title { font-weight: 700; font-size: 1.02rem; }
+.bot-sub { font-size: .74rem; opacity: .9; font-weight: 500; }
+.bot-close { background: transparent; border: 0; color: #fff; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.bot-body { padding: 12px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; background: var(--bg); flex: 1 1 auto; min-height: 180px; }
+.bot-msg { padding: 9px 12px; border-radius: 12px; font-size: .9rem; line-height: 1.5; max-width: 88%; }
+.bot-msg.from-bot { background: #fff; border: 1px solid var(--line); align-self: flex-start; }
+.bot-msg.from-user { background: var(--accent); color: #fff; align-self: flex-end; }
+.bot-msg.from-user a { color: #fff; }
+.bot-quick { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.bot-view { display: flex; flex-direction: column; gap: 8px; }
+.bot-view[hidden] { display: none; }
+.bot-back { align-self: flex-start; margin-top: 4px; background: var(--accent); color: #fff; border: 0; border-radius: 999px; padding: 7px 14px; font-size: .85rem; font-weight: 600; cursor: pointer; }
+.bot-back:hover { background: var(--accent-dark); }
+.bot-q { background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 6px 11px; font-size: .82rem; cursor: pointer; color: var(--ink); }
+.bot-q:hover { background: var(--line); }
+.bot-wa-row { padding: 10px 12px 0; }
+.bot-wa { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 10px; border-radius: 10px; font-size: .9rem; font-weight: 600; text-decoration: none; }
+.bot-wa:not(.disabled) { background: #25D366; color: #fff; }
+.bot-wa:not(.disabled):hover { background: #1da851; }
+.bot-wa.disabled { background: var(--line); color: var(--slate); cursor: not-allowed; }
+.bot-wa small { font-weight: 500; opacity: .85; }
+.bot-foot { padding: 10px 12px; border-top: 1px solid var(--line); font-size: .82rem; color: var(--slate); }
+.bot-foot a { color: var(--accent-dark); font-weight: 600; }
+@media (max-width: 480px) { .bot-panel { right: 10px; left: 10px; width: auto; bottom: 78px; } .bot-toggle { right: 14px; bottom: 14px; width: 54px; height: 54px; } }
+
 /* MOBILE */
 @media (max-width: 640px) {
   .site-header { padding: 10px 14px; gap: 8px; justify-content: center; }

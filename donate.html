@@ -99,5 +99,60 @@
   })();
 </script>
 
+<button class="bot-toggle" id="botToggle" aria-label="Ask Jana Sevak" title="Ask Jana Sevak"><span class="bot-toggle-ic"><svg viewBox='0 0 24 24' width='28' height='28' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z'/><circle cx='8.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/><circle cx='12.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/><circle cx='16.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/></svg></span></button>
+<div class="bot-panel" id="botPanel" hidden role="dialog" aria-label="Jana Sevak">
+  <div class="bot-head"><div class="bot-head-t"><span class="bot-title">Jana Sevak</span><span class="bot-sub">Here to serve.</span></div><button class="bot-close" id="botClose" aria-label="Close">&times;</button></div>
+  <div class="bot-body" id="botBody">
+    <div class="bot-view" id="botMenu">
+      <div class="bot-msg from-bot">Hi! How can I help? Pick a question below.</div>
+      <div class="bot-quick">
+      <button class="bot-q" data-i="0">What does UCP stand for?</button>
+      <button class="bot-q" data-i="1">Are you left or right wing?</button>
+      <button class="bot-q" data-i="2">How do I join?</button>
+      <button class="bot-q" data-i="3">How can I volunteer?</button>
+      <button class="bot-q" data-i="4">How is the party funded?</button>
+      <button class="bot-q" data-i="5">How do I contact you?</button>
+      </div>
+    </div>
+    <div class="bot-view" id="botAnswer" hidden>
+      <div class="bot-msg from-user" id="botQText"></div>
+      <div class="bot-msg from-bot" id="botAText"></div>
+      <button class="bot-back" id="botBack">&#8592; Back to menu</button>
+    </div>
+  </div>
+  <div class="bot-wa-row"><span class="bot-wa disabled" aria-disabled="true"><svg viewBox='0 0 24 24' width='18' height='18' fill='currentColor' aria-hidden='true'><path d='M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.511 5.26l-.999 3.648 3.477-.707zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z'/></svg> Chat on WhatsApp <small>(coming soon)</small></span></div>
+  <div class="bot-foot">Still need help? <a href='/contact.html'>Contact us</a> or <a href='/join.html'>Join</a>.</div>
+  <div id="botAnswers" hidden>
+      <div data-a="0">Power to the people, transparent and accountable government, and development that reaches everyone.</div>
+      <div data-a="1">Neither. We judge ideas by whether they help people and the country's future - our focus is development, people and the future.</div>
+      <div data-a="2">Membership is free. Open the <a href='/join.html'>Join</a> page and fill the short form.</div>
+      <div data-a="3">Go to the <a href='/volunteer.html'>Volunteer</a> page and tell us how you'd like to help.</div>
+      <div data-a="4">We are committed to fully transparent funding. Details will be published as the party formalises.</div>
+      <div data-a="5">Email <a href='mailto:ucpindia.official@gmail.com'>ucpindia.official@gmail.com</a> or use the <a href='/contact.html'>Contact</a> page.</div>
+  </div>
+</div>
+<script>
+(function(){
+  var t=document.getElementById('botToggle'), p=document.getElementById('botPanel'), c=document.getElementById('botClose');
+  var menu=document.getElementById('botMenu'), ansv=document.getElementById('botAnswer');
+  var qText=document.getElementById('botQText'), aText=document.getElementById('botAText'), back=document.getElementById('botBack');
+  if(!t){ return; }
+  t.addEventListener('click', function(){ p.hidden=!p.hidden; });
+  c.addEventListener('click', function(){ p.hidden=true; });
+  back.addEventListener('click', function(){ ansv.hidden=true; menu.hidden=false; });
+  var qs=document.querySelectorAll('.bot-q');
+  for(var i=0;i<qs.length;i++){
+    qs[i].addEventListener('click', function(e){
+      var idx=e.currentTarget.getAttribute('data-i');
+      var ans=document.querySelector('#botAnswers [data-a="'+idx+'"]');
+      qText.textContent=e.currentTarget.textContent;
+      aText.innerHTML=ans?ans.innerHTML:'';
+      menu.hidden=true; ansv.hidden=false;
+      document.getElementById('botBody').scrollTop=0;
+    });
+  }
+})();
+</script>
+
 </body>
 </html>

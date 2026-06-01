@@ -491,9 +491,94 @@
     }, { threshold: 0.08 });
     for (var i=0;i<els.length;i++){ io.observe(els[i]); }
   })();
+  (function(){
+    var poll = document.getElementById('poll');
+    if (!poll) return;
+    var ns = poll.getAttribute('data-ns');
+    var base = 'https://abacus.jasoncameron.dev';
+    var opts = poll.querySelectorAll('.poll-opt');
+    var optBox = poll.querySelector('.poll-options');
+    var resBox = poll.querySelector('.poll-results');
+    var barsEl = poll.querySelector('.poll-bars');
+    var msgEl = poll.querySelector('.poll-msg');
+    var totalEl = poll.querySelector('.poll-total');
+    var keys = [], labelMap = {};
+    for (var i=0;i<opts.length;i++){ var k=opts[i].getAttribute('data-key'); keys.push(k); labelMap[k]=opts[i].textContent; }
+    var storeKey = 'ucpPoll_'+ns;
+    function fetchCounts(cb){
+      var counts={}, done=0, ok=true;
+      function step(){ done++; if (done===keys.length) cb(ok, counts); }
+      keys.forEach(function(k){
+        fetch(base+'/get/'+ns+'/'+k).then(function(r){ return r.ok ? r.json() : {value:0}; })
+          .then(function(d){ counts[k]=(d && typeof d.value==='number')?d.value:0; step(); })
+          .catch(function(){ ok=false; counts[k]=0; step(); });
+      });
+    }
+    function render(myKey, counts){
+      var total=0; keys.forEach(function(k){ total += counts[k]||0; });
+      var sorted = keys.slice().sort(function(a,b){ return (counts[b]||0)-(counts[a]||0); });
+      var html='';
+      sorted.forEach(function(k){
+        var v=counts[k]||0, pct = total ? Math.round(v/total*100) : 0;
+        html += '<div class="poll-bar'+(k===myKey?' mine':'')+'"><div class="poll-bar-top"><span>'+labelMap[k]+'</span><span>'+pct+'%</span></div><div class="poll-bar-track"><div class="poll-bar-fill" data-pct="'+pct+'" style="width:0"></div></div></div>';
+      });
+      barsEl.innerHTML = html;
+      totalEl.textContent = total + ' ' + poll.getAttribute('data-total');
+      var msg = poll.getAttribute('data-thanks');
+      if (myKey) { msg += ' ' + poll.getAttribute('data-voted') + ' ' + labelMap[myKey] + '.'; }
+      msgEl.textContent = msg;
+      optBox.hidden = true; resBox.hidden = false;
+      requestAnimationFrame(function(){ var f=barsEl.querySelectorAll('.poll-bar-fill'); for (var x=0;x<f.length;x++){ f[x].style.width = f[x].getAttribute('data-pct')+'%'; } });
+    }
+    function showResults(myKey){
+      fetchCounts(function(ok, counts){
+        if (!ok){ msgEl.textContent = poll.getAttribute('data-err'); barsEl.innerHTML=''; totalEl.textContent=''; optBox.hidden=true; resBox.hidden=false; return; }
+        render(myKey, counts);
+      });
+    }
+    var prior=null; try { prior = localStorage.getItem(storeKey); } catch(e){}
+    if (prior) { showResults(prior); }
+    for (var m=0;m<opts.length;m++){
+      opts[m].addEventListener('click', function(e){
+        var k = e.currentTarget.getAttribute('data-key');
+        for (var n=0;n<opts.length;n++){ opts[n].disabled = true; }
+        try { localStorage.setItem(storeKey, k); } catch(e2){}
+        fetch(base+'/hit/'+ns+'/'+k).then(function(r){ return r.json(); }).then(function(){ showResults(k); }).catch(function(){ showResults(k); });
+      });
+    }
+  })();
+  (function(){
+    var btn = document.getElementById('shareBtn');
+    var menu = document.getElementById('shareMenu');
+    if (!btn || !menu) return;
+    function closeMenu(){ menu.hidden = true; btn.setAttribute('aria-expanded','false'); }
+    function openMenu(){ menu.hidden = false; btn.setAttribute('aria-expanded','true'); }
+    btn.addEventListener('click', function(e){ e.stopPropagation(); if (menu.hidden) openMenu(); else closeMenu(); });
+    document.addEventListener('click', function(e){ if (!menu.hidden && !menu.contains(e.target) && e.target !== btn && !btn.contains(e.target)) closeMenu(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
+    var links = menu.querySelectorAll('a');
+    for (var i=0;i<links.length;i++){ links[i].addEventListener('click', function(){ setTimeout(closeMenu, 60); }); }
+    var cp = menu.querySelector('.share-menu-copy');
+    if (cp) {
+      cp.addEventListener('click', function(){
+        var u = cp.getAttribute('data-url'), label = cp.textContent, done = cp.getAttribute('data-done');
+        if (navigator.clipboard) { navigator.clipboard.writeText(u).catch(function(){}); }
+        cp.classList.add('copied'); cp.textContent = done;
+        setTimeout(function(){ cp.classList.remove('copied'); cp.textContent = label; closeMenu(); }, 1200);
+      });
+    }
+  })();
 </script>
 
-<a class="side-cta" href="/kn/ideas.html" aria-label="ಸಲಹೆ ನೀಡಿ"><svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M9 18h6'/><path d='M10 22h4'/><path d='M15.1 14c.2-1 .7-1.8 1.4-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.2 1.5 1.4 2.5'/></svg><span>ಸಲಹೆ ನೀಡಿ</span></a>
+<div class="side-tabs"><button class="side-share" type="button" id="shareBtn" aria-haspopup="true" aria-expanded="false" aria-label="ಹಂಚಿಕೊಳ್ಳಿ"><svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><circle cx='18' cy='5' r='3'/><circle cx='6' cy='12' r='3'/><circle cx='18' cy='19' r='3'/><line x1='8.59' y1='13.51' x2='15.42' y2='17.49'/><line x1='15.41' y1='6.51' x2='8.59' y2='10.49'/></svg><span>ಹಂಚಿಕೊಳ್ಳಿ</span></button><a class="side-cta" href="/kn/ideas.html" aria-label="ಸಲಹೆ ನೀಡಿ"><svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M9 18h6'/><path d='M10 22h4'/><path d='M15.1 14c.2-1 .7-1.8 1.4-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.2 1.5 1.4 2.5'/></svg><span>ಸಲಹೆ ನೀಡಿ</span></a></div>
+<div class="share-menu" id="shareMenu" hidden>
+  <div class="share-menu-title">ಹಂಚಿಕೊಳ್ಳಿ</div>
+  <a href="https://wa.me/?text=%E0%B2%AF%E0%B3%81%E0%B2%A8%E0%B3%88%E0%B2%9F%E0%B3%86%E0%B2%A1%E0%B3%8D%20%E0%B2%B8%E0%B2%BF%E0%B2%9F%E0%B2%BF%E0%B2%9C%E0%B2%A8%E0%B3%8D%E0%B2%B8%E0%B3%8D%20%E0%B2%AA%E0%B2%BE%E0%B2%B0%E0%B3%8D%E0%B2%9F%E0%B2%BF%E0%B2%AF%E0%B2%A8%E0%B3%8D%E0%B2%A8%E0%B3%81%20%E0%B2%AC%E0%B3%86%E0%B2%82%E0%B2%AC%E0%B2%B2%E0%B2%BF%E0%B2%B8%E0%B2%BF%20-%20%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%BE%E0%B2%AE%E0%B2%BE%E0%B2%A3%E0%B2%BF%E0%B2%95%2C%20%E0%B2%9C%E0%B2%A8%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%A5%E0%B2%AE%20%E0%B2%B0%E0%B2%BE%E0%B2%9C%E0%B2%95%E0%B2%BE%E0%B2%B0%E0%B2%A3.%20https%3A%2F%2Fucpindia.org%2Fkn%2Fstates.html" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fucpindia.org%2Fkn%2Fstates.html" target="_blank" rel="noopener">Facebook</a>
+  <a href="https://twitter.com/intent/tweet?text=%E0%B2%AF%E0%B3%81%E0%B2%A8%E0%B3%88%E0%B2%9F%E0%B3%86%E0%B2%A1%E0%B3%8D%20%E0%B2%B8%E0%B2%BF%E0%B2%9F%E0%B2%BF%E0%B2%9C%E0%B2%A8%E0%B3%8D%E0%B2%B8%E0%B3%8D%20%E0%B2%AA%E0%B2%BE%E0%B2%B0%E0%B3%8D%E0%B2%9F%E0%B2%BF%E0%B2%AF%E0%B2%A8%E0%B3%8D%E0%B2%A8%E0%B3%81%20%E0%B2%AC%E0%B3%86%E0%B2%82%E0%B2%AC%E0%B2%B2%E0%B2%BF%E0%B2%B8%E0%B2%BF%20-%20%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%BE%E0%B2%AE%E0%B2%BE%E0%B2%A3%E0%B2%BF%E0%B2%95%2C%20%E0%B2%9C%E0%B2%A8%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%A5%E0%B2%AE%20%E0%B2%B0%E0%B2%BE%E0%B2%9C%E0%B2%95%E0%B2%BE%E0%B2%B0%E0%B2%A3.&url=https%3A%2F%2Fucpindia.org%2Fkn%2Fstates.html" target="_blank" rel="noopener">X (Twitter)</a>
+  <a href="https://t.me/share/url?url=https%3A%2F%2Fucpindia.org%2Fkn%2Fstates.html&text=%E0%B2%AF%E0%B3%81%E0%B2%A8%E0%B3%88%E0%B2%9F%E0%B3%86%E0%B2%A1%E0%B3%8D%20%E0%B2%B8%E0%B2%BF%E0%B2%9F%E0%B2%BF%E0%B2%9C%E0%B2%A8%E0%B3%8D%E0%B2%B8%E0%B3%8D%20%E0%B2%AA%E0%B2%BE%E0%B2%B0%E0%B3%8D%E0%B2%9F%E0%B2%BF%E0%B2%AF%E0%B2%A8%E0%B3%8D%E0%B2%A8%E0%B3%81%20%E0%B2%AC%E0%B3%86%E0%B2%82%E0%B2%AC%E0%B2%B2%E0%B2%BF%E0%B2%B8%E0%B2%BF%20-%20%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%BE%E0%B2%AE%E0%B2%BE%E0%B2%A3%E0%B2%BF%E0%B2%95%2C%20%E0%B2%9C%E0%B2%A8%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%A5%E0%B2%AE%20%E0%B2%B0%E0%B2%BE%E0%B2%9C%E0%B2%95%E0%B2%BE%E0%B2%B0%E0%B2%A3." target="_blank" rel="noopener">Telegram</a>
+  <button type="button" class="share-menu-copy" data-url="https://ucpindia.org/kn/states.html" data-done="ನಕಲಾಗಿದೆ!">ಲಿಂಕ್ ನಕಲಿಸಿ</button>
+</div>
 
 <button class="bot-toggle" id="botToggle" aria-label="ಜನಸೇವಕರನ್ನು ಕೇಳಿ" title="ಜನಸೇವಕರನ್ನು ಕೇಳಿ"><span class="bot-toggle-ic"><svg viewBox='0 0 24 24' width='28' height='28' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z'/><circle cx='8.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/><circle cx='12.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/><circle cx='16.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/></svg></span></button>
 <div class="bot-panel" id="botPanel" hidden role="dialog" aria-label="ಜನಸೇವಕ">

@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Donate - United Citizens Party</title>
+  <title>Share an Idea - United Citizens Party</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Your contribution helps us build a better future.">
-  <link rel="canonical" href="https://ucpindia.org/donate.html">
-  <link rel="alternate" hreflang="en" href="https://ucpindia.org/donate.html">
-  <link rel="alternate" hreflang="kn" href="https://ucpindia.org/kn/donate.html">
-  <link rel="alternate" hreflang="hi" href="https://ucpindia.org/hi/donate.html">
-  <link rel="alternate" hreflang="x-default" href="https://ucpindia.org/donate.html">
+  <meta name="description" content="What would make your area better? Tell us your ideas - we are listening.">
+  <link rel="canonical" href="https://ucpindia.org/ideas.html">
+  <link rel="alternate" hreflang="en" href="https://ucpindia.org/ideas.html">
+  <link rel="alternate" hreflang="kn" href="https://ucpindia.org/kn/ideas.html">
+  <link rel="alternate" hreflang="hi" href="https://ucpindia.org/hi/ideas.html">
+  <link rel="alternate" hreflang="x-default" href="https://ucpindia.org/ideas.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="United Citizens Party">
-  <meta property="og:title" content="Donate - United Citizens Party">
-  <meta property="og:description" content="Your contribution helps us build a better future.">
-  <meta property="og:url" content="https://ucpindia.org/donate.html">
+  <meta property="og:title" content="Share an Idea - United Citizens Party">
+  <meta property="og:description" content="What would make your area better? Tell us your ideas - we are listening.">
+  <meta property="og:url" content="https://ucpindia.org/ideas.html">
   <meta property="og:image" content="https://ucpindia.org/assets/logo.jpg">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Donate - United Citizens Party">
-  <meta name="twitter:description" content="Your contribution helps us build a better future.">
+  <meta name="twitter:title" content="Share an Idea - United Citizens Party">
+  <meta name="twitter:description" content="What would make your area better? Tell us your ideas - we are listening.">
   <meta name="twitter:image" content="https://ucpindia.org/assets/logo.jpg">
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/jpg" href="/assets/logo.jpg">
@@ -50,15 +50,15 @@
     <a href="/join.html" class="join">Join Us</a>
   </nav>
   <div class="lang-switch" aria-label="Choose language">
-    <a href="/donate.html" class="active">EN</a>
-    <a href="/kn/donate.html">ಕನ್ನಡ</a>
-    <a href="/hi/donate.html">हिंदी</a>
+    <a href="/ideas.html" class="active">EN</a>
+    <a href="/kn/ideas.html">ಕನ್ನಡ</a>
+    <a href="/hi/ideas.html">हिंदी</a>
   </div>
 </header>
 
 <section class="hero">
-  <h1>Support the Movement</h1>
-  <p>Your contribution helps us build a better future.</p>
+  <h1>Share Your Ideas for Change</h1>
+  <p>What would make your area better? Tell us your ideas - we are listening.</p>
 
 </section>
 
@@ -66,9 +66,95 @@
 
 <main class="container">
   <div class="card">
-    <p class="lead">A people-first movement is powered by the people. Your support keeps us independent and transparent.</p>
-    <h2>Donations - Coming Soon</h2>
-    <p>Official, fully transparent donation details will be published shortly. In the meantime, reach us at:<br><strong>Email:</strong> ucpindia.official@gmail.com</p>
+    <p class="lead">A better future is built on good ideas - and they can come from anyone. Whether it's your village, ward, or town, tell us what you'd like to see improved and how you think we can do it. We read every suggestion, and the best ideas will shape our plans and our manifesto for the future.</p>
+    <h2>Share Your Idea</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" onsubmit="this.subject.value='Idea: '+(this.category.value||'')+' : '+(this.state.value||'')+' : '+(this.city.value||'');">
+      <input type="hidden" name="access_key" value="ecea60c2-ea97-43ce-9942-a3f71d02b6f3">
+      <input type="hidden" name="redirect" value="https://ucpindia.org/thankyou.html">
+      <input type="hidden" name="subject" value="New Improvement Idea">
+      <input type="hidden" name="auto_reply" value="true">
+      <input type="hidden" name="form_name" value="Share an Idea">
+      <input type="hidden" name="page_url" value="https://ucpindia.org/ideas.html">
+      <input type="checkbox" name="botcheck" style="display:none;">
+
+      <label>Area of Improvement</label>
+      <select name="category" required>
+        <option value="" disabled selected>Select an area</option>
+        <option value="Roads & Transport">Roads & Transport</option>
+        <option value="Water Supply">Water Supply</option>
+        <option value="Electricity">Electricity</option>
+        <option value="Sanitation & Cleanliness">Sanitation & Cleanliness</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Education & Schools">Education & Schools</option>
+        <option value="Jobs & Economy">Jobs & Economy</option>
+        <option value="Farmers & Agriculture">Farmers & Agriculture</option>
+        <option value="Public Safety">Public Safety</option>
+        <option value="Governance & Transparency">Governance & Transparency</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label>State</label>
+      <select name="state" required>
+        <option value="" disabled selected>Select your state</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+        <option value="Assam">Assam</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Chhattisgarh">Chhattisgarh</option>
+        <option value="Goa">Goa</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Madhya Pradesh">Madhya Pradesh</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Manipur">Manipur</option>
+        <option value="Meghalaya">Meghalaya</option>
+        <option value="Mizoram">Mizoram</option>
+        <option value="Nagaland">Nagaland</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Sikkim">Sikkim</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Telangana">Telangana</option>
+        <option value="Tripura">Tripura</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="Uttarakhand">Uttarakhand</option>
+        <option value="West Bengal">West Bengal</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+        <option value="Ladakh">Ladakh</option>
+        <option value="Puducherry">Puducherry</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+        <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+        <option value="Lakshadweep">Lakshadweep</option>
+      </select>
+
+      <label>City / Town</label>
+      <input type="text" name="city" required>
+
+      <label>What would you like to improve?</label>
+      <textarea name="message" rows="3" placeholder="What's the current situation, and what could be better?"></textarea>
+
+      <label>Your Idea or Suggestion</label>
+      <textarea name="suggestion" rows="4" required placeholder="How do you think we can make it better?"></textarea>
+
+      <label>Your Name (optional)</label>
+      <input type="text" name="name">
+
+      <label>Email (optional)</label>
+      <input type="email" name="email">
+
+      <label>Phone / WhatsApp (optional)</label>
+      <input type="text" name="phone">
+
+      <p class="form-note">We use your details only to follow up on your idea. Nothing is shared publicly.</p>
+      <button type="submit">Submit</button>
+    </form>
   </div>
 </main>
 
@@ -98,8 +184,8 @@
       <h4>Get Involved</h4>
     <a href="/events.html">Events</a>
     <a href="/volunteer.html">Volunteer</a>
-    <a href="/ideas.html">Share an Idea</a>
-    <a href="/donate.html" class="active">Donate</a>
+    <a href="/ideas.html" class="active">Share an Idea</a>
+    <a href="/donate.html">Donate</a>
     <a href="/media.html">Media</a>
     <a href="/faq.html">FAQ</a>
     <a href="/contact.html">Contact</a>
@@ -116,8 +202,8 @@
       </form>
       <div class="share">
         <span class="share-lbl">Share</span>
-        <a href="https://wa.me/?text=Support%20the%20United%20Citizens%20Party%20-%20honest%2C%20people-first%20politics.%20https%3A%2F%2Fucpindia.org%2Fdonate.html" target="_blank" rel="noopener" aria-label="Share on WhatsApp"><svg viewBox='0 0 24 24' width='20' height='20' fill='currentColor' aria-hidden='true'><path d='M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.511 5.26l-.999 3.648 3.477-.707zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z'/></svg></a>
-        <button type="button" class="share-copy" data-url="https://ucpindia.org/donate.html" aria-label="Copy link"><svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect x='9' y='9' width='11' height='11' rx='2'/><path d='M5 15V5a2 2 0 0 1 2-2h10'/></svg></button>
+        <a href="https://wa.me/?text=Support%20the%20United%20Citizens%20Party%20-%20honest%2C%20people-first%20politics.%20https%3A%2F%2Fucpindia.org%2Fideas.html" target="_blank" rel="noopener" aria-label="Share on WhatsApp"><svg viewBox='0 0 24 24' width='20' height='20' fill='currentColor' aria-hidden='true'><path d='M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.511 5.26l-.999 3.648 3.477-.707zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z'/></svg></a>
+        <button type="button" class="share-copy" data-url="https://ucpindia.org/ideas.html" aria-label="Copy link"><svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect x='9' y='9' width='11' height='11' rx='2'/><path d='M5 15V5a2 2 0 0 1 2-2h10'/></svg></button>
       </div>
     </div>
   </div>
@@ -146,7 +232,7 @@
   })();
 </script>
 
-<a class="side-cta" href="/ideas.html" aria-label="Share an Idea"><svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M9 18h6'/><path d='M10 22h4'/><path d='M15.1 14c.2-1 .7-1.8 1.4-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.2 1.5 1.4 2.5'/></svg><span>Share an Idea</span></a>
+
 
 <button class="bot-toggle" id="botToggle" aria-label="Ask Jana Sevak" title="Ask Jana Sevak"><span class="bot-toggle-ic"><svg viewBox='0 0 24 24' width='28' height='28' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z'/><circle cx='8.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/><circle cx='12.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/><circle cx='16.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/></svg></span></button>
 <div class="bot-panel" id="botPanel" hidden role="dialog" aria-label="Jana Sevak">

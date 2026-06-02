@@ -191,6 +191,16 @@
   <div class="footer-bottom">&copy; <span id="year"></span> United Citizens Party. Beyond left and right.</div>
 </footer>
 
+<div class="side-tabs"><button class="side-share" type="button" id="shareBtn" aria-haspopup="true" aria-expanded="false" aria-label="Share"><svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><circle cx='18' cy='5' r='3'/><circle cx='6' cy='12' r='3'/><circle cx='18' cy='19' r='3'/><line x1='8.59' y1='13.51' x2='15.42' y2='17.49'/><line x1='15.41' y1='6.51' x2='8.59' y2='10.49'/></svg><span>Share</span></button><a class="side-cta" href="/ideas.html" aria-label="Share an Idea"><svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M9 18h6'/><path d='M10 22h4'/><path d='M15.1 14c.2-1 .7-1.8 1.4-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.2 1.5 1.4 2.5'/></svg><span>Share an Idea</span></a></div>
+<div class="share-menu" id="shareMenu" hidden>
+  <div class="share-menu-title">Share</div>
+  <a href="https://wa.me/?text=Support%20the%20United%20Citizens%20Party%20-%20honest%2C%20people-first%20politics.%20https%3A%2F%2Fucpindia.org%2Fcontact.html" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fucpindia.org%2Fcontact.html" target="_blank" rel="noopener">Facebook</a>
+  <a href="https://twitter.com/intent/tweet?text=Support%20the%20United%20Citizens%20Party%20-%20honest%2C%20people-first%20politics.&url=https%3A%2F%2Fucpindia.org%2Fcontact.html" target="_blank" rel="noopener">X (Twitter)</a>
+  <a href="https://t.me/share/url?url=https%3A%2F%2Fucpindia.org%2Fcontact.html&text=Support%20the%20United%20Citizens%20Party%20-%20honest%2C%20people-first%20politics." target="_blank" rel="noopener">Telegram</a>
+  <button type="button" class="share-menu-copy" data-url="https://ucpindia.org/contact.html" data-done="Copied!">Copy link</button>
+</div>
+
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
   if ('serviceWorker' in navigator) { window.addEventListener('load', function(){ navigator.serviceWorker.register('/sw.js').catch(function(){}); }); }
@@ -289,16 +299,6 @@
     }
   })();
 </script>
-
-<div class="side-tabs"><button class="side-share" type="button" id="shareBtn" aria-haspopup="true" aria-expanded="false" aria-label="Share"><svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><circle cx='18' cy='5' r='3'/><circle cx='6' cy='12' r='3'/><circle cx='18' cy='19' r='3'/><line x1='8.59' y1='13.51' x2='15.42' y2='17.49'/><line x1='15.41' y1='6.51' x2='8.59' y2='10.49'/></svg><span>Share</span></button><a class="side-cta" href="/ideas.html" aria-label="Share an Idea"><svg viewBox='0 0 24 24' width='18' height='18' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M9 18h6'/><path d='M10 22h4'/><path d='M15.1 14c.2-1 .7-1.8 1.4-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.2 1.5 1.4 2.5'/></svg><span>Share an Idea</span></a></div>
-<div class="share-menu" id="shareMenu" hidden>
-  <div class="share-menu-title">Share</div>
-  <a href="https://wa.me/?text=Support%20the%20United%20Citizens%20Party%20-%20honest%2C%20people-first%20politics.%20https%3A%2F%2Fucpindia.org%2Fcontact.html" target="_blank" rel="noopener">WhatsApp</a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fucpindia.org%2Fcontact.html" target="_blank" rel="noopener">Facebook</a>
-  <a href="https://twitter.com/intent/tweet?text=Support%20the%20United%20Citizens%20Party%20-%20honest%2C%20people-first%20politics.&url=https%3A%2F%2Fucpindia.org%2Fcontact.html" target="_blank" rel="noopener">X (Twitter)</a>
-  <a href="https://t.me/share/url?url=https%3A%2F%2Fucpindia.org%2Fcontact.html&text=Support%20the%20United%20Citizens%20Party%20-%20honest%2C%20people-first%20politics." target="_blank" rel="noopener">Telegram</a>
-  <button type="button" class="share-menu-copy" data-url="https://ucpindia.org/contact.html" data-done="Copied!">Copy link</button>
-</div>
 
 <button class="bot-toggle" id="botToggle" aria-label="Ask Jana Sevak" title="Ask Jana Sevak"><span class="bot-toggle-ic"><svg viewBox='0 0 24 24' width='28' height='28' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z'/><circle cx='8.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/><circle cx='12.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/><circle cx='16.5' cy='11.5' r='1.1' fill='currentColor' stroke='none'/></svg></span></button>
 <div class="bot-panel" id="botPanel" hidden role="dialog" aria-label="Jana Sevak">

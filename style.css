@@ -64,6 +64,10 @@ nav a.join.active { background: var(--accent-dark); color: #fff; }
 .card ul { padding-left: 1.15em; }
 .card li { margin: .35em 0; }
 .lead { font-size: 1.18rem; color: var(--slate); }
+.vision-list { list-style: none; padding-left: 0; margin: 18px 0; }
+.vision-list li { position: relative; padding: 12px 0 12px 32px; border-bottom: 1px solid var(--line); font-size: 1.06rem; line-height: 1.5; }
+.vision-list li:last-child { border-bottom: 0; }
+.vision-list li::before { content: "\2192"; position: absolute; left: 0; top: 12px; color: var(--accent-dark); font-weight: 800; }
 .form-note { font-size: .85rem; color: var(--slate); margin: 6px 0 14px; opacity: .85; }
 /* Floating side tabs - vertical, right edge, on every page */
 .side-tabs { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 60; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }

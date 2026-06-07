@@ -69,6 +69,29 @@ nav a.join.active { background: var(--accent-dark); color: #fff; }
 .vision-list li:last-child { border-bottom: 0; }
 .vision-list li::before { content: "\2192"; position: absolute; left: 0; top: 12px; color: var(--accent-dark); font-weight: 800; }
 .form-note { font-size: .85rem; color: var(--slate); margin: 6px 0 14px; opacity: .85; }
+/* LEADERSHIP PATHWAY DIAGRAM */
+.pathway { max-width: 760px; margin: 28px auto 8px; }
+.path-step { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px 18px 64px; box-shadow: 0 6px 18px rgba(15,23,42,.07); }
+.path-step h3 { margin: 0 0 4px; color: var(--indigo); font-size: 1.12rem; }
+.path-step p { margin: 0; color: var(--slate); font-size: .98rem; }
+.path-num { position: absolute; left: 16px; top: 16px; width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--indigo), var(--teal)); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+.path-arrow { display: flex; justify-content: center; color: var(--accent-dark); font-size: 1.5rem; line-height: 1; margin: 8px 0; }
+.path-final { background: linear-gradient(135deg, var(--indigo), var(--teal)); border: 0; }
+.path-final h3, .path-final p { color: #fff; }
+.path-final .path-num { background: #fff; color: var(--indigo); }
+.path-parallel { border: 2px dashed var(--accent); border-radius: 16px; padding: 14px 14px 16px; background: rgba(6,182,212,.05); }
+.path-parallel-label { text-align: center; font-weight: 700; color: var(--accent-dark); font-size: .9rem; margin: 0 0 12px; text-transform: uppercase; letter-spacing: .5px; }
+.path-tracks { display: flex; gap: 14px; }
+.path-track { flex: 1; }
+.path-track .path-step { padding-left: 20px; height: 100%; }
+.path-track .path-step h3 { display: flex; align-items: center; gap: 8px; }
+.path-tag { display: inline-block; background: var(--accent); color: #fff; font-size: .72rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; vertical-align: middle; }
+.path-dur { margin-top: 8px; font-size: .9rem; }
+.path-dur b { color: var(--ink); }
+.zero-box { border: 2px solid #dc2626; background: #fef2f2; border-radius: 14px; padding: 16px 20px; margin: 20px 0; }
+.zero-box h3 { color: #b91c1c !important; margin: 0 0 6px; }
+.zero-box p, .zero-box li { color: #7f1d1d; }
+@media (max-width: 620px) { .path-tracks { flex-direction: column; } }
 /* Floating side tabs - vertical, right edge, on every page */
 .side-tabs { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 60; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
 .side-cta, .side-share { display: flex; flex-direction: column; align-items: center; gap: 8px; color: #fff; border: 0; text-decoration: none; font-weight: 700; font-size: .9rem; font-family: inherit; padding: 16px 9px; cursor: pointer; box-shadow: 0 3px 14px rgba(0,0,0,.25); border-radius: 12px 0 0 12px; transition: transform .18s ease, background .18s ease; }

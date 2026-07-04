@@ -69,6 +69,13 @@ nav a.join.active { background: var(--accent-dark); color: #fff; }
 .vision-list li:last-child { border-bottom: 0; }
 .vision-list li::before { content: "\2192"; position: absolute; left: 0; top: 12px; color: var(--accent-dark); font-weight: 800; }
 .form-note { font-size: .85rem; color: var(--slate); margin: 6px 0 14px; opacity: .85; }
+/* Membership type selector on Join form */
+.mtype { display: flex; flex-direction: column; gap: 8px; margin: 4px 0 6px; }
+.mtype-opt { display: flex; align-items: flex-start; gap: 10px; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; cursor: pointer; transition: border-color .15s, background .15s; }
+.mtype-opt:hover { border-color: var(--accent); }
+.mtype-opt input { margin-top: 4px; }
+.mtype-opt strong { color: var(--indigo); }
+#leaderFields { border-left: 3px solid var(--teal); padding-left: 14px; margin: 4px 0 6px; }
 /* LEADERSHIP PATHWAY DIAGRAM */
 .pathway { max-width: 760px; margin: 28px auto 8px; }
 .path-step { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px 18px 64px; box-shadow: 0 6px 18px rgba(15,23,42,.07); }

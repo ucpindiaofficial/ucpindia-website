@@ -14,14 +14,14 @@
   <meta property="og:title" content="Vijayapura District - United Citizens Party">
   <meta property="og:description" content="Village by village - let us build the movement from your own place.">
   <meta property="og:url" content="https://ucpindia.org/kar/vijayapura/">
-  <meta property="og:image" content="https://ucpindia.org/assets/og-banner.png?v=16">
+  <meta property="og:image" content="https://ucpindia.org/assets/og-banner.png?v=17">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vijayapura District - United Citizens Party">
   <meta name="twitter:description" content="Village by village - let us build the movement from your own place.">
-  <meta name="twitter:image" content="https://ucpindia.org/assets/og-banner.png?v=16">
-  <link rel="stylesheet" href="/style.css?v=16">
+  <meta name="twitter:image" content="https://ucpindia.org/assets/og-banner.png?v=17">
+  <link rel="stylesheet" href="/style.css?v=17">
   <link rel="icon" type="image/jpg" href="/assets/logo.jpg">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#3a1c71">
@@ -66,17 +66,20 @@
 
 <main class="container">
   <div class="card">
-    <p class="lead">Vijayapura (formerly Bijapur) is a district in northern Karnataka. Below is the list of villages in the district - find your village, join, and share what matters in your place with us.</p>
+    <p class="lead">Vijayapura (formerly Bijapur) is a district in northern Karnataka - find your village below, join, and share what matters in your place with us.</p>
+    <p>Vijayapura sits on the Deccan plateau of northern Karnataka, north of the Krishna river, and is the district headquarters. It was the capital of the Adil Shahi sultanate (15th-17th centuries), whose rulers left landmark monuments - the Gol Gumbaz (one of the world's largest domes), the Ibrahim Rauza, Bara Kaman and the old fort.</p>
+    <p>Today it is an agricultural region known for jowar, pulses, grapes, lemon and sugarcane, with the Almatti (Upper Krishna) reservoir a major source of irrigation. The district is organised into several talukas and hundreds of villages - all listed below.</p>
     <p class="vjp-note">Each village's description will be added by members who join from there. The village list is drawn from public government data (Census 2011); if your village is not listed, choose 'Other' and type it in.</p>
 
     <div class="join-card" id="vjpJoin">
+      <div class="vjp-thanks" id="vjpThanks" hidden>&#10003; Thank you - your details have reached us. We'll get in touch soon.</div>
       <h2>Join this chapter</h2>
       <p class="form-note">Students, youth and residents of Vijayapura district - share your details and we will reach out to you.</p>
       <form action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="ecea60c2-ea97-43ce-9942-a3f71d02b6f3">
         <input type="hidden" name="subject" value="New Vijayapura Chapter - Join Request">
         <input type="hidden" name="District" value="Vijayapura">
-        <input type="hidden" name="redirect" value="https://ucpindia.org/thankyou.html">
+        <input type="hidden" name="redirect" value="https://ucpindia.org/kar/vijayapura/#joined">
         <input type="checkbox" name="botcheck" style="display:none;">
         <div class="form-grid">
           <div><label>Name</label><input type="text" name="Name" required></div>
@@ -1508,6 +1511,10 @@
           for(var g=0;g<groups.length;g++){ var vis=groups[g].querySelectorAll('.village-chip:not(.hide)').length; if(vis>0){ groups[g].classList.remove('hide'); any=true; } else { groups[g].classList.add('hide'); } }
           var nr=document.getElementById('vjpNoResult'); if(nr){ nr.hidden=any; }
         };
+        if((location.hash||'')==='#joined'){
+          var tb=document.getElementById('vjpThanks');
+          if(tb){ tb.hidden=false; var jc=document.getElementById('vjpJoin'); if(jc&&jc.scrollIntoView){ jc.scrollIntoView({behavior:'smooth',block:'start'}); } }
+        }
       })();
     </script>
   </div>

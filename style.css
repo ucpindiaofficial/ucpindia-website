@@ -196,6 +196,7 @@ form input:focus, form textarea:focus { outline: 2px solid var(--accent); border
 /* CHAPTERS: Vijayapura district page (join form + village directory) */
 .vjp-note { font-size: .85rem; color: var(--slate); background: var(--bg); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; padding: 9px 13px; margin: 10px 0 6px; }
 .join-card { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 20px; margin: 20px 0 28px; }
+.vjp-thanks { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; border-radius: 10px; padding: 12px 14px; margin: 0 0 14px; font-weight: 600; }
 .join-card h2 { margin: .1em 0 .2em; }
 .join-card .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; margin-top: 12px; }
 .join-card label { display: block; font-weight: 600; font-size: .88rem; margin: 0 0 4px; color: var(--ink); }

@@ -197,6 +197,23 @@ form input:focus, form textarea:focus { outline: 2px solid var(--accent); border
 .vjp-note { font-size: .85rem; color: var(--slate); background: var(--bg); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; padding: 9px 13px; margin: 10px 0 6px; }
 .join-card { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 20px; margin: 20px 0 28px; }
 .vjp-thanks { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; border-radius: 10px; padding: 12px 14px; margin: 0 0 14px; font-weight: 600; }
+.vjp-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 6px 0 22px; }
+.vjp-stat { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 14px; text-align: center; display: flex; flex-direction: column; justify-content: center; gap: 2px; }
+.vjp-stat .vs-num { font-size: 1.9rem; font-weight: 800; color: var(--accent-dark); line-height: 1.1; }
+.vjp-stat .vs-lbl { font-size: .8rem; color: var(--slate); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.vjp-stat-cta { text-decoration: none; background: linear-gradient(135deg, var(--indigo), var(--teal)); border: 0; color: #fff; }
+.vjp-stat-cta .vs-cta-h { font-size: 1.05rem; font-weight: 800; color: #fff; }
+.vjp-stat-cta .vs-cta-sub { font-size: .84rem; color: rgba(255,255,255,.92); font-weight: 600; }
+.vjp-stat-cta:hover { filter: brightness(1.07); }
+.hl-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 6px 0 22px; }
+.hl-strip .hl-lbl { font-size: .78rem; font-weight: 700; color: var(--slate); text-transform: uppercase; letter-spacing: .04em; margin-right: 2px; }
+.hl-chip { background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font-size: .84rem; color: var(--ink); }
+.taluka-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin: 6px 0 10px; }
+.taluka-card { display: flex; flex-direction: column; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; text-decoration: none; color: var(--ink); transition: border-color .12s, transform .1s, box-shadow .15s; }
+.taluka-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(15,23,42,.08); }
+.taluka-card .tc-name { font-weight: 700; font-size: 1rem; color: var(--ink); }
+.taluka-card .tc-count { font-size: .85rem; color: var(--accent-dark); font-weight: 600; }
+@media (max-width: 560px) { .vjp-stats { grid-template-columns: 1fr; } }
 .join-card h2 { margin: .1em 0 .2em; }
 .join-card .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; margin-top: 12px; }
 .join-card label { display: block; font-weight: 600; font-size: .88rem; margin: 0 0 4px; color: var(--ink); }

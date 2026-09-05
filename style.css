@@ -168,6 +168,53 @@ form input:focus, form textarea:focus { outline: 2px solid var(--accent); border
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin-top: 12px; }
 .gallery .ph { background: var(--bg); border: 1px dashed var(--line); border-radius: 10px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: var(--slate); font-size: .85rem; }
 
+/* CHAPTERS: clickable state-grid "map" directory */
+.map-search { position: relative; margin: 6px 0 16px; }
+.map-search input { width: 100%; padding: 12px 14px 12px 40px; border: 1px solid var(--line); border-radius: 10px; font-size: 1rem; background: var(--card); color: var(--ink); }
+.map-search input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(6,182,212,.15); }
+.map-search::before { content: "\1F50D"; position: absolute; left: 13px; top: 50%; transform: translateY(-50%); font-size: .95rem; opacity: .55; }
+.map-legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 0 0 14px; font-size: .85rem; color: var(--slate); }
+.map-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.map-legend i { width: 13px; height: 13px; border-radius: 4px; display: inline-block; }
+.map-legend i.live { background: var(--teal); }
+.map-legend i.soon { background: #fff; border: 1px solid var(--line); }
+.state-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin-top: 6px; }
+.state-tile { position: relative; text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 13px 14px; cursor: pointer; font: inherit; color: var(--ink); box-shadow: none; transition: border-color .15s, transform .1s, box-shadow .15s; width: 100%; }
+.state-tile:hover { background: var(--card); border-color: var(--accent); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(15,23,42,.08); }
+.state-tile .st-name { font-weight: 700; font-size: .98rem; display: block; }
+.state-tile .st-tag { font-size: .76rem; color: var(--slate); }
+.state-tile.live { border-color: var(--teal); }
+.state-tile.live::before { content: ""; position: absolute; left: 0; top: 12px; bottom: 12px; width: 4px; border-radius: 0 4px 4px 0; background: var(--teal); }
+.state-tile.live .st-tag { color: var(--teal); font-weight: 600; }
+.state-tile[aria-pressed="true"] { border-color: var(--accent); background: #ecfeff; box-shadow: 0 0 0 2px rgba(6,182,212,.25); }
+.state-tile.hide { display: none; }
+.map-noresult { color: var(--slate); font-size: .95rem; padding: 10px 2px; }
+.state-panel .st-back { display: inline-block; margin: 0 0 4px; background: none; border: 0; color: var(--accent-dark); font: inherit; font-size: .9rem; cursor: pointer; padding: 4px 0; box-shadow: none; }
+.state-panel .st-back:hover { background: none; text-decoration: underline; color: var(--accent-dark); }
+@media (max-width: 600px) { .state-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); } }
+
+/* CHAPTERS: Vijayapura district page (join form + village directory) */
+.vjp-note { font-size: .85rem; color: var(--slate); background: var(--bg); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; padding: 9px 13px; margin: 10px 0 6px; }
+.join-card { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 20px; margin: 20px 0 28px; }
+.join-card h2 { margin: .1em 0 .2em; }
+.join-card .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; margin-top: 12px; }
+.join-card label { display: block; font-weight: 600; font-size: .88rem; margin: 0 0 4px; color: var(--ink); }
+.join-card input, .join-card select, .join-card textarea { width: 100%; margin: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 9px; font: inherit; background: var(--card); color: var(--ink); display: block; }
+.join-card input:focus, .join-card select:focus, .join-card textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(6,182,212,.15); }
+.join-card .full { grid-column: 1 / -1; }
+.join-card textarea { min-height: 82px; resize: vertical; }
+.join-card .submit-row { grid-column: 1 / -1; margin-top: 4px; }
+.join-card .submit-row button { margin-top: 0; }
+.villages-directory { margin-top: 8px; }
+.taluka-group { margin: 16px 0; }
+.taluka-group.hide { display: none; }
+.taluka-group h3 { font-size: 1.05rem; margin: 0 0 9px; color: var(--ink); border-bottom: 1px solid var(--line); padding-bottom: 5px; }
+.taluka-group .tk-count { color: var(--slate); font-weight: 500; font-size: .78rem; }
+.village-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.village-chips .village-chip { display: inline-block; width: auto; background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 999px; margin: 0; padding: 5px 12px; font: inherit; font-size: .84rem; font-weight: 500; cursor: pointer; box-shadow: none; text-align: left; transition: border-color .12s, background .12s, color .12s; }
+.village-chips .village-chip:hover { background: #ecfeff; border-color: var(--accent); color: var(--accent-dark); }
+.village-chips .village-chip.hide { display: none; }
+
 /* JOIN PAGE: form left, reasons right (desktop); stacked on mobile */
 .join-layout { display: grid; gap: 30px; }
 @media (min-width: 760px) {

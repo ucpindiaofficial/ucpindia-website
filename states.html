@@ -15,14 +15,14 @@
   <meta property="og:title" content="States - United Citizens Party">
   <meta property="og:description" content="Starting in Karnataka, and growing outward step by step.">
   <meta property="og:url" content="https://ucpindia.org/states.html">
-  <meta property="og:image" content="https://ucpindia.org/assets/og-banner.png?v=14">
+  <meta property="og:image" content="https://ucpindia.org/assets/og-banner.png?v=16">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="States - United Citizens Party">
   <meta name="twitter:description" content="Starting in Karnataka, and growing outward step by step.">
-  <meta name="twitter:image" content="https://ucpindia.org/assets/og-banner.png?v=14">
-  <link rel="stylesheet" href="/style.css?v=14">
+  <meta name="twitter:image" content="https://ucpindia.org/assets/og-banner.png?v=16">
+  <link rel="stylesheet" href="/style.css?v=16">
   <link rel="icon" type="image/jpg" href="/assets/logo.jpg">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#3a1c71">
@@ -68,50 +68,54 @@
 
 <main class="container">
   <div class="card">
-    <p class="lead">We are just getting started. Karnataka is our first home - select a state to see how UCP is organized there.</p>
-    <label for="stateSelect"><strong>Choose your state:</strong></label>
-    <select id="stateSelect" onchange="ucpShowState(this.value)">
-      <option value="Karnataka" selected>Karnataka</option>
-      <option value="Andhra Pradesh">Andhra Pradesh</option>
-      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-      <option value="Assam">Assam</option>
-      <option value="Bihar">Bihar</option>
-      <option value="Chhattisgarh">Chhattisgarh</option>
-      <option value="Goa">Goa</option>
-      <option value="Gujarat">Gujarat</option>
-      <option value="Haryana">Haryana</option>
-      <option value="Himachal Pradesh">Himachal Pradesh</option>
-      <option value="Jharkhand">Jharkhand</option>
-      <option value="Kerala">Kerala</option>
-      <option value="Madhya Pradesh">Madhya Pradesh</option>
-      <option value="Maharashtra">Maharashtra</option>
-      <option value="Manipur">Manipur</option>
-      <option value="Meghalaya">Meghalaya</option>
-      <option value="Mizoram">Mizoram</option>
-      <option value="Nagaland">Nagaland</option>
-      <option value="Odisha">Odisha</option>
-      <option value="Punjab">Punjab</option>
-      <option value="Rajasthan">Rajasthan</option>
-      <option value="Sikkim">Sikkim</option>
-      <option value="Tamil Nadu">Tamil Nadu</option>
-      <option value="Telangana">Telangana</option>
-      <option value="Tripura">Tripura</option>
-      <option value="Uttar Pradesh">Uttar Pradesh</option>
-      <option value="Uttarakhand">Uttarakhand</option>
-      <option value="West Bengal">West Bengal</option>
-      <option value="Delhi">Delhi</option>
-      <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-      <option value="Ladakh">Ladakh</option>
-      <option value="Puducherry">Puducherry</option>
-      <option value="Chandigarh">Chandigarh</option>
-      <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-      <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
-      <option value="Lakshadweep">Lakshadweep</option>
-    </select>
+    <p class="lead">We are just getting started. Karnataka is our first home - pick your state to see how UCP is organized there, or how you can help start it.</p>
+    <div class="map-search"><input type="text" id="stateSearch" placeholder="Search your state or union territory..." oninput="ucpFilterStates(this.value)" aria-label="Search your state or union territory..."></div>
+    <div class="map-legend"><span><i class="live"></i>Active chapter</span><span><i class="soon"></i>Ready to begin</span></div>
+    <div class="state-grid" id="stateGrid">
+      <button type="button" class="state-tile live" aria-pressed="false" data-state="Karnataka" data-search="karnataka" onclick="ucpShowState('Karnataka')"><span class="st-name">Karnataka</span><span class="st-tag">Active chapter</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Andhra Pradesh" data-search="andhra pradesh" onclick="ucpShowState('Andhra Pradesh')"><span class="st-name">Andhra Pradesh</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Arunachal Pradesh" data-search="arunachal pradesh" onclick="ucpShowState('Arunachal Pradesh')"><span class="st-name">Arunachal Pradesh</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Assam" data-search="assam" onclick="ucpShowState('Assam')"><span class="st-name">Assam</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Bihar" data-search="bihar" onclick="ucpShowState('Bihar')"><span class="st-name">Bihar</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Chhattisgarh" data-search="chhattisgarh" onclick="ucpShowState('Chhattisgarh')"><span class="st-name">Chhattisgarh</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Goa" data-search="goa" onclick="ucpShowState('Goa')"><span class="st-name">Goa</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Gujarat" data-search="gujarat" onclick="ucpShowState('Gujarat')"><span class="st-name">Gujarat</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Haryana" data-search="haryana" onclick="ucpShowState('Haryana')"><span class="st-name">Haryana</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Himachal Pradesh" data-search="himachal pradesh" onclick="ucpShowState('Himachal Pradesh')"><span class="st-name">Himachal Pradesh</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Jharkhand" data-search="jharkhand" onclick="ucpShowState('Jharkhand')"><span class="st-name">Jharkhand</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Kerala" data-search="kerala" onclick="ucpShowState('Kerala')"><span class="st-name">Kerala</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Madhya Pradesh" data-search="madhya pradesh" onclick="ucpShowState('Madhya Pradesh')"><span class="st-name">Madhya Pradesh</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Maharashtra" data-search="maharashtra" onclick="ucpShowState('Maharashtra')"><span class="st-name">Maharashtra</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Manipur" data-search="manipur" onclick="ucpShowState('Manipur')"><span class="st-name">Manipur</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Meghalaya" data-search="meghalaya" onclick="ucpShowState('Meghalaya')"><span class="st-name">Meghalaya</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Mizoram" data-search="mizoram" onclick="ucpShowState('Mizoram')"><span class="st-name">Mizoram</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Nagaland" data-search="nagaland" onclick="ucpShowState('Nagaland')"><span class="st-name">Nagaland</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Odisha" data-search="odisha" onclick="ucpShowState('Odisha')"><span class="st-name">Odisha</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Punjab" data-search="punjab" onclick="ucpShowState('Punjab')"><span class="st-name">Punjab</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Rajasthan" data-search="rajasthan" onclick="ucpShowState('Rajasthan')"><span class="st-name">Rajasthan</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Sikkim" data-search="sikkim" onclick="ucpShowState('Sikkim')"><span class="st-name">Sikkim</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Tamil Nadu" data-search="tamil nadu" onclick="ucpShowState('Tamil Nadu')"><span class="st-name">Tamil Nadu</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Telangana" data-search="telangana" onclick="ucpShowState('Telangana')"><span class="st-name">Telangana</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Tripura" data-search="tripura" onclick="ucpShowState('Tripura')"><span class="st-name">Tripura</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Uttar Pradesh" data-search="uttar pradesh" onclick="ucpShowState('Uttar Pradesh')"><span class="st-name">Uttar Pradesh</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Uttarakhand" data-search="uttarakhand" onclick="ucpShowState('Uttarakhand')"><span class="st-name">Uttarakhand</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="West Bengal" data-search="west bengal" onclick="ucpShowState('West Bengal')"><span class="st-name">West Bengal</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Delhi" data-search="delhi" onclick="ucpShowState('Delhi')"><span class="st-name">Delhi</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Jammu and Kashmir" data-search="jammu and kashmir" onclick="ucpShowState('Jammu and Kashmir')"><span class="st-name">Jammu and Kashmir</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Ladakh" data-search="ladakh" onclick="ucpShowState('Ladakh')"><span class="st-name">Ladakh</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Puducherry" data-search="puducherry" onclick="ucpShowState('Puducherry')"><span class="st-name">Puducherry</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Chandigarh" data-search="chandigarh" onclick="ucpShowState('Chandigarh')"><span class="st-name">Chandigarh</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Andaman and Nicobar Islands" data-search="andaman and nicobar islands" onclick="ucpShowState('Andaman and Nicobar Islands')"><span class="st-name">Andaman and Nicobar Islands</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Dadra and Nagar Haveli and Daman and Diu" data-search="dadra and nagar haveli and daman and diu" onclick="ucpShowState('Dadra and Nagar Haveli and Daman and Diu')"><span class="st-name">Dadra and Nagar Haveli and Daman and Diu</span><span class="st-tag">Be a founding member</span></button>
+      <button type="button" class="state-tile" aria-pressed="false" data-state="Lakshadweep" data-search="lakshadweep" onclick="ucpShowState('Lakshadweep')"><span class="st-name">Lakshadweep</span><span class="st-tag">Be a founding member</span></button>
+    </div>
+    <p class="map-noresult" id="stateNoResult" hidden>No state matches that search.</p>
 
-    <div class="state-panel" id="st-Karnataka">
+    <div class="state-panel" id="st-Karnataka" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Karnataka</h2>
     <p class="lead">Karnataka is where our movement began. Here is how we are organized across the state.</p>
+    <p><a class="btn" href="/kar/vijayapura/">Explore Vijayapura district &rarr;</a></p>
     <h2>State Leadership</h2>
     <p>Our Karnataka state team coordinates the movement, supports local chapters, and represents members' concerns. Detailed profiles will be published soon.</p>
     <h2>Local Chapters</h2>
@@ -123,6 +127,7 @@
     <div class="gallery"><div class="ph">Photo coming soon</div><div class="ph">Photo coming soon</div><div class="ph">Photo coming soon</div></div>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Start / Join a Chapter</a></p>    </div>
     <div class="state-panel" id="st-AndhraPradesh" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Andhra Pradesh</h2>
     <p class="lead">We are growing across India - and Andhra Pradesh is next.</p>
     <p>UCP is not yet formally organized in Andhra Pradesh, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -131,6 +136,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-ArunachalPradesh" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Arunachal Pradesh</h2>
     <p class="lead">We are growing across India - and Arunachal Pradesh is next.</p>
     <p>UCP is not yet formally organized in Arunachal Pradesh, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -139,6 +145,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Assam" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Assam</h2>
     <p class="lead">We are growing across India - and Assam is next.</p>
     <p>UCP is not yet formally organized in Assam, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -147,6 +154,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Bihar" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Bihar</h2>
     <p class="lead">We are growing across India - and Bihar is next.</p>
     <p>UCP is not yet formally organized in Bihar, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -155,6 +163,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Chhattisgarh" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Chhattisgarh</h2>
     <p class="lead">We are growing across India - and Chhattisgarh is next.</p>
     <p>UCP is not yet formally organized in Chhattisgarh, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -163,6 +172,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Goa" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Goa</h2>
     <p class="lead">We are growing across India - and Goa is next.</p>
     <p>UCP is not yet formally organized in Goa, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -171,6 +181,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Gujarat" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Gujarat</h2>
     <p class="lead">We are growing across India - and Gujarat is next.</p>
     <p>UCP is not yet formally organized in Gujarat, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -179,6 +190,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Haryana" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Haryana</h2>
     <p class="lead">We are growing across India - and Haryana is next.</p>
     <p>UCP is not yet formally organized in Haryana, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -187,6 +199,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-HimachalPradesh" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Himachal Pradesh</h2>
     <p class="lead">We are growing across India - and Himachal Pradesh is next.</p>
     <p>UCP is not yet formally organized in Himachal Pradesh, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -195,6 +208,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Jharkhand" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Jharkhand</h2>
     <p class="lead">We are growing across India - and Jharkhand is next.</p>
     <p>UCP is not yet formally organized in Jharkhand, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -203,6 +217,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Kerala" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Kerala</h2>
     <p class="lead">We are growing across India - and Kerala is next.</p>
     <p>UCP is not yet formally organized in Kerala, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -211,6 +226,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-MadhyaPradesh" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Madhya Pradesh</h2>
     <p class="lead">We are growing across India - and Madhya Pradesh is next.</p>
     <p>UCP is not yet formally organized in Madhya Pradesh, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -219,6 +235,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Maharashtra" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Maharashtra</h2>
     <p class="lead">We are growing across India - and Maharashtra is next.</p>
     <p>UCP is not yet formally organized in Maharashtra, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -227,6 +244,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Manipur" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Manipur</h2>
     <p class="lead">We are growing across India - and Manipur is next.</p>
     <p>UCP is not yet formally organized in Manipur, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -235,6 +253,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Meghalaya" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Meghalaya</h2>
     <p class="lead">We are growing across India - and Meghalaya is next.</p>
     <p>UCP is not yet formally organized in Meghalaya, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -243,6 +262,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Mizoram" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Mizoram</h2>
     <p class="lead">We are growing across India - and Mizoram is next.</p>
     <p>UCP is not yet formally organized in Mizoram, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -251,6 +271,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Nagaland" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Nagaland</h2>
     <p class="lead">We are growing across India - and Nagaland is next.</p>
     <p>UCP is not yet formally organized in Nagaland, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -259,6 +280,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Odisha" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Odisha</h2>
     <p class="lead">We are growing across India - and Odisha is next.</p>
     <p>UCP is not yet formally organized in Odisha, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -267,6 +289,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Punjab" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Punjab</h2>
     <p class="lead">We are growing across India - and Punjab is next.</p>
     <p>UCP is not yet formally organized in Punjab, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -275,6 +298,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Rajasthan" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Rajasthan</h2>
     <p class="lead">We are growing across India - and Rajasthan is next.</p>
     <p>UCP is not yet formally organized in Rajasthan, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -283,6 +307,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Sikkim" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Sikkim</h2>
     <p class="lead">We are growing across India - and Sikkim is next.</p>
     <p>UCP is not yet formally organized in Sikkim, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -291,6 +316,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-TamilNadu" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Tamil Nadu</h2>
     <p class="lead">We are growing across India - and Tamil Nadu is next.</p>
     <p>UCP is not yet formally organized in Tamil Nadu, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -299,6 +325,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Telangana" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Telangana</h2>
     <p class="lead">We are growing across India - and Telangana is next.</p>
     <p>UCP is not yet formally organized in Telangana, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -307,6 +334,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Tripura" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Tripura</h2>
     <p class="lead">We are growing across India - and Tripura is next.</p>
     <p>UCP is not yet formally organized in Tripura, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -315,6 +343,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-UttarPradesh" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Uttar Pradesh</h2>
     <p class="lead">We are growing across India - and Uttar Pradesh is next.</p>
     <p>UCP is not yet formally organized in Uttar Pradesh, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -323,6 +352,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Uttarakhand" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Uttarakhand</h2>
     <p class="lead">We are growing across India - and Uttarakhand is next.</p>
     <p>UCP is not yet formally organized in Uttarakhand, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -331,6 +361,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-WestBengal" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in West Bengal</h2>
     <p class="lead">We are growing across India - and West Bengal is next.</p>
     <p>UCP is not yet formally organized in West Bengal, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -339,6 +370,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Delhi" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Delhi</h2>
     <p class="lead">We are growing across India - and Delhi is next.</p>
     <p>UCP is not yet formally organized in Delhi, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -347,6 +379,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-JammuandKashmir" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Jammu and Kashmir</h2>
     <p class="lead">We are growing across India - and Jammu and Kashmir is next.</p>
     <p>UCP is not yet formally organized in Jammu and Kashmir, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -355,6 +388,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Ladakh" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Ladakh</h2>
     <p class="lead">We are growing across India - and Ladakh is next.</p>
     <p>UCP is not yet formally organized in Ladakh, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -363,6 +397,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Puducherry" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Puducherry</h2>
     <p class="lead">We are growing across India - and Puducherry is next.</p>
     <p>UCP is not yet formally organized in Puducherry, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -371,6 +406,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Chandigarh" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Chandigarh</h2>
     <p class="lead">We are growing across India - and Chandigarh is next.</p>
     <p>UCP is not yet formally organized in Chandigarh, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -379,6 +415,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-AndamanandNicobarIslands" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Andaman and Nicobar Islands</h2>
     <p class="lead">We are growing across India - and Andaman and Nicobar Islands is next.</p>
     <p>UCP is not yet formally organized in Andaman and Nicobar Islands, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -387,6 +424,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-DadraandNagarHaveliandDamanandDiu" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Dadra and Nagar Haveli and Daman and Diu</h2>
     <p class="lead">We are growing across India - and Dadra and Nagar Haveli and Daman and Diu is next.</p>
     <p>UCP is not yet formally organized in Dadra and Nagar Haveli and Daman and Diu, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -395,6 +433,7 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
     <div class="state-panel" id="st-Lakshadweep" hidden>
+      <button type="button" class="st-back" onclick="ucpClearState()">&larr; Back to all states</button>
     <h2>UCP in Lakshadweep</h2>
     <p class="lead">We are growing across India - and Lakshadweep is next.</p>
     <p>UCP is not yet formally organized in Lakshadweep, which means there is a real opportunity for you to help shape it from the start.</p>
@@ -403,19 +442,42 @@
     <p>Reach us at <a href="mailto:ucpindia.joinus@gmail.com">ucpindia.joinus@gmail.com</a>, or join the movement below.</p>
     <p style="margin-top:18px;"><a class="btn" href="/join.html">Become a Founding Member</a></p>    </div>
 
+    <noscript><style>.state-panel{display:block!important}.map-search,.map-legend,.state-grid,.st-back{display:none!important}</style></noscript>
+
     <script>
+      function ucpScrollTo(el){ if(el && el.scrollIntoView){ el.scrollIntoView({behavior:'smooth',block:'start'}); } }
+      function ucpSetPressed(s){
+        var t=document.querySelectorAll('.state-tile');
+        for(var i=0;i<t.length;i++){ t[i].setAttribute('aria-pressed', t[i].getAttribute('data-state')===s ? 'true':'false'); }
+      }
       function ucpShowState(s){
         var id='st-'+s.replace(/[^A-Za-z0-9]/g,'');
-        var ps=document.querySelectorAll('.state-panel');
-        for(var i=0;i<ps.length;i++){ ps[i].hidden = (ps[i].id!==id); }
+        var ps=document.querySelectorAll('.state-panel'), target=null;
+        for(var i=0;i<ps.length;i++){ var on=(ps[i].id===id); ps[i].hidden=!on; if(on){ target=ps[i]; } }
+        ucpSetPressed(s);
         if(history.replaceState){ history.replaceState(null,'','#'+encodeURIComponent(s)); }
+        ucpScrollTo(target);
+      }
+      function ucpClearState(){
+        var ps=document.querySelectorAll('.state-panel');
+        for(var i=0;i<ps.length;i++){ ps[i].hidden=true; }
+        ucpSetPressed('');
+        if(history.replaceState){ history.replaceState(null,'',location.pathname+location.search); }
+        ucpScrollTo(document.getElementById('stateGrid'));
+      }
+      function ucpFilterStates(q){
+        q=(q||'').trim().toLowerCase();
+        var t=document.querySelectorAll('.state-tile'), shown=0;
+        for(var i=0;i<t.length;i++){
+          var m=t[i].getAttribute('data-search').indexOf(q)!==-1;
+          if(m){ t[i].classList.remove('hide'); shown++; } else { t[i].classList.add('hide'); }
+        }
+        var nr=document.getElementById('stateNoResult'); if(nr){ nr.hidden = shown!==0; }
       }
       (function(){
-        var h=decodeURIComponent((location.hash||'').replace('#',''));
-        if(!h){ return; }
-        var sel=document.getElementById('stateSelect'); var ok=false;
-        for(var i=0;i<sel.options.length;i++){ if(sel.options[i].value===h){ sel.value=h; ok=true; } }
-        if(ok){ ucpShowState(h); }
+        var h=decodeURIComponent((location.hash||'').replace('#','')); if(!h){ return; }
+        var t=document.querySelector('.state-tile[data-state="'+h.replace(/["\\]/g,'')+'"]');
+        if(t){ ucpShowState(h); }
       })();
     </script>
   </div>

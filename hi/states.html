@@ -15,14 +15,14 @@
   <meta property="og:title" content="राज्य - यूनाइटेड सिटिज़न्स पार्टी">
   <meta property="og:description" content="कर्नाटक से शुरुआत, कदम-दर-कदम विस्तार।">
   <meta property="og:url" content="https://ucpindia.org/hi/states.html">
-  <meta property="og:image" content="https://ucpindia.org/assets/og-banner.png?v=19">
+  <meta property="og:image" content="https://ucpindia.org/assets/og-banner.png?v=20">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="राज्य - यूनाइटेड सिटिज़न्स पार्टी">
   <meta name="twitter:description" content="कर्नाटक से शुरुआत, कदम-दर-कदम विस्तार।">
-  <meta name="twitter:image" content="https://ucpindia.org/assets/og-banner.png?v=19">
-  <link rel="stylesheet" href="/style.css?v=19">
+  <meta name="twitter:image" content="https://ucpindia.org/assets/og-banner.png?v=20">
+  <link rel="stylesheet" href="/style.css?v=20">
   <link rel="icon" type="image/jpg" href="/assets/logo.jpg">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#3a1c71">
@@ -115,7 +115,7 @@
       <button type="button" class="st-back" onclick="ucpClearState()">&larr; सभी राज्यों पर वापस जाएँ</button>
     <h2>कर्नाटक में UCP</h2>
     <p class="lead">हमारा आंदोलन कर्नाटक से शुरू हुआ। पूरे राज्य में हम कैसे संगठित हैं, यह यहाँ है।</p>
-    <p><a class="btn" href="/kn/kar/vijayapura/">विजयपुरा ज़िला देखें &rarr;</a></p>
+    <p><a class="btn" href="/kn/kar/vijayapura/">विजयपुरा में अपना गाँव खोजें &rarr;</a></p>
     <h2>राज्य नेतृत्व</h2>
     <p>हमारी कर्नाटक राज्य टीम आंदोलन का समन्वय करती है, स्थानीय इकाइयों का समर्थन करती है और सदस्यों की चिंताओं का प्रतिनिधित्व करती है। विवरण जल्द प्रकाशित किए जाएँगे।</p>
     <h2>स्थानीय इकाइयाँ</h2>
@@ -555,13 +555,21 @@
     });
   }
   (function(){
-    if (!('IntersectionObserver' in window)) return;
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var els = document.querySelectorAll('.card, .pillar');
+    function revealAll(){ for (var i=0;i<els.length;i++){ els[i].classList.add('in'); } }
+    // Never leave content hidden: no IntersectionObserver, or reduced motion -> show at once.
+    if (!('IntersectionObserver' in window)) { revealAll(); return; }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { revealAll(); return; }
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.08 });
-    for (var i=0;i<els.length;i++){ io.observe(els[i]); }
+    }, { threshold: 0, rootMargin: '0px 0px -5% 0px' });
+    for (var i=0;i<els.length;i++){
+      // A card taller than the viewport can never cross a positive ratio; reveal it directly.
+      if (els[i].offsetHeight >= window.innerHeight) { els[i].classList.add('in'); }
+      else { io.observe(els[i]); }
+    }
+    // Safety net: if anything is still hidden shortly after load, reveal it.
+    setTimeout(revealAll, 1600);
   })();
   (function(){
     var poll = document.getElementById('poll');
